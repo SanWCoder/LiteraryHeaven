@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (4.5.0)
+  - Kingfisher (3.10.3)
+  - ReactiveCocoa (6.0.0-rc.3):
+    - ReactiveSwift (= 2.0.0-rc.3)
+  - ReactiveSwift (2.0.0-rc.3):
+    - Result (~> 3.2)
+  - Result (3.2.3)
+  - SnapKit (3.2.0)
+  - SVProgressHUD (2.0.3)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5.0)
+  - Kingfisher (~> 3.10.3)
+  - ReactiveCocoa (~> 6.0.0-rc.3)
+  - SnapKit (~> 3.2.0)
+  - SVProgressHUD
+  - SwiftyJSON (~> 3.1.4)
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
+  ReactiveCocoa: 9f35dce8cc0a97995774d900df9655d544bdce63
+  ReactiveSwift: b1d3e63bd166566478508d75007bb335c568bd29
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: b9cd2b7617c5129c7043f40c13fcf7103f438b46
+
+COCOAPODS: 1.3.0.beta.2

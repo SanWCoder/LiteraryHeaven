@@ -1,0 +1,6 @@
+framework module Pods_LiteraryHeaven {
+  umbrella header "Pods-LiteraryHeaven-umbrella.h"
+
+  export *
+  module * { export * }
+}
