@@ -45,6 +45,7 @@ let kColor10 = UIColor.hexInt(0xd1714f)
 let kColor11 = UIColor.hexInt(0x333333)
 let kColor12 = UIColor.hexInt(0x666666)
 
+
 /// 友盟账号
 let kPushKey = "570cc349e0f55a0485000868"
 
