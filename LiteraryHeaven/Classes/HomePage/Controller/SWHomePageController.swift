@@ -65,7 +65,7 @@ extension SWHomePageController : UITableViewDelegate,UITableViewDataSource{
             cellHeight = 175
         }
         else{
-           cellHeight = 95
+            cellHeight = 95
         }
         return cellHeight
     }
@@ -81,22 +81,8 @@ extension SWHomePageController : UITableViewDelegate,UITableViewDataSource{
 /// 请求网路数据
 extension SWHomePageController {
     func reloadData() {
-        Alamofire.request(kHomePageURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
-            print(response)
-            let json = JSON(response.data!)
-            print(json)
-            for (index,subJson):(String, JSON) in json["articles"] {
-                let model = SWArticleModel()
-                model.articleImage = subJson["img"].stringValue
-                model.authorNick = subJson["feed_title"].stringValue
-                model.articleTitle = subJson["title"].stringValue
-                model.clickCount = subJson["rectime"].stringValue
-                if Int(index) == 0 {
-                model.isRecommend = true
-                model.articleImage = "http://preview.quanjing.com/pm0046/pm0046-4622um.jpg"
-                }
-                self.dataArr.append(model)
-            }
+        SWHomePageViewModel.homeData { (homeData) in
+            self.dataArr = homeData!
             self.tableView.reloadData()
         }
     }

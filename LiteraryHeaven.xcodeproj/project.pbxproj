@@ -14,6 +14,8 @@
 		2D358D001F297FDD00554353 /* SWHomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D358CFF1F297FDD00554353 /* SWHomePageCell.swift */; };
 		2D67DF6D1F2EFC720092DF47 /* SWSlideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF6C1F2EFC720092DF47 /* SWSlideMenuModel.swift */; };
 		2D67DF6F1F2F1B450092DF47 /* SWSlideViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF6E1F2F1B450092DF47 /* SWSlideViewFlowLayout.swift */; };
+		2D67DF711F31A9960092DF47 /* SWHomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF701F31A9960092DF47 /* SWHomePageViewModel.swift */; };
+		2D67DF731F31A9E90092DF47 /* SWNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF721F31A9E90092DF47 /* SWNetRequest.swift */; };
 		2D996E031F20905800F893DC /* SWAdveSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D996E021F20905800F893DC /* SWAdveSlideView.swift */; };
 		2D996E091F209B0D00F893DC /* SWArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D996E081F209B0D00F893DC /* SWArticleModel.swift */; };
 		2D996E341F21EE2200F893DC /* SWBaseSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D996E331F21EE2200F893DC /* SWBaseSettingController.swift */; };
@@ -59,6 +61,8 @@
 		2D358CFF1F297FDD00554353 /* SWHomePageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWHomePageCell.swift; sourceTree = "<group>"; };
 		2D67DF6C1F2EFC720092DF47 /* SWSlideMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSlideMenuModel.swift; sourceTree = "<group>"; };
 		2D67DF6E1F2F1B450092DF47 /* SWSlideViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSlideViewFlowLayout.swift; sourceTree = "<group>"; };
+		2D67DF701F31A9960092DF47 /* SWHomePageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWHomePageViewModel.swift; sourceTree = "<group>"; };
+		2D67DF721F31A9E90092DF47 /* SWNetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWNetRequest.swift; sourceTree = "<group>"; };
 		2D996E021F20905800F893DC /* SWAdveSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAdveSlideView.swift; sourceTree = "<group>"; };
 		2D996E081F209B0D00F893DC /* SWArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWArticleModel.swift; sourceTree = "<group>"; };
 		2D996E331F21EE2200F893DC /* SWBaseSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWBaseSettingController.swift; sourceTree = "<group>"; };
@@ -326,6 +330,7 @@
 		2DA208DC1F1F30FD00D318EC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2D67DF701F31A9960092DF47 /* SWHomePageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 		2DA208E41F1F30FD00D318EC /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2D67DF721F31A9E90092DF47 /* SWNetRequest.swift */,
 			);
 			name = Tools;
 			path = Classes/Tools;
@@ -656,12 +662,14 @@
 				2DA208F51F1F4A4100D318EC /* SWTabBarController.swift in Sources */,
 				2D996E341F21EE2200F893DC /* SWBaseSettingController.swift in Sources */,
 				2D358D001F297FDD00554353 /* SWHomePageCell.swift in Sources */,
+				2D67DF731F31A9E90092DF47 /* SWNetRequest.swift in Sources */,
 				2DA208F31F1F4A2000D318EC /* SWNavigationController.swift in Sources */,
 				2D996E091F209B0D00F893DC /* SWArticleModel.swift in Sources */,
 				2D0BDA861F2B263600754B7D /* SWSlideMenuView.swift in Sources */,
 				2DA208ED1F1F373500D318EC /* SWHomePageController.swift in Sources */,
 				2D67DF6D1F2EFC720092DF47 /* SWSlideMenuModel.swift in Sources */,
 				2D67DF6F1F2F1B450092DF47 /* SWSlideViewFlowLayout.swift in Sources */,
+				2D67DF711F31A9960092DF47 /* SWHomePageViewModel.swift in Sources */,
 				2D358CFC1F27481200554353 /* SWUserSetingController.swift in Sources */,
 				2D996E381F21EEA900F893DC /* SWBaseSettingModel.swift in Sources */,
 				2DA208E61F1F30FD00D318EC /* AppDelegate.swift in Sources */,

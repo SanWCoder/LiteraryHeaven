@@ -17,6 +17,7 @@ class SWUserSetingController: SWBaseSettingController {
     }
     
     override func addGroup()  {
+        
         let group = SWBaseSettingGroup.init(headerText: "个人设置", footerText: "")
         group.items.append(SWBaseSettingImage.init(title: "个人资料", icon: nil, subImage: "more", subClass: SWUserInfoController()))
         group.items.append(SWBaseSettingImage.init(title: "修改密码", icon: nil, subImage: "more", subClass: nil))
