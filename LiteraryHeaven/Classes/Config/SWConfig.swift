@@ -49,9 +49,8 @@ let kColor12 = UIColor.hexInt(0x666666)
 let kPushKey = "570cc349e0f55a0485000868"
 
 
-/// 地址
-let kURL = "http://test.api.16qs.com/v1/index"
-// "http://wyhapi.16lao.com:8000/api"
+/// 地址（加地址数据）
+let kHomePageURL = "http://0.0.0.0:tuicool@api.tuicool.com/api/articles/hot.json?cid=0&size=30"
 
 
 /// 返回有透明度的颜色

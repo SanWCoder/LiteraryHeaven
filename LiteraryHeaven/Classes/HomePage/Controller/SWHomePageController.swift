@@ -15,7 +15,6 @@ import Kingfisher
 
 class SWHomePageController: UIViewController {
     lazy var tableView : UITableView = {
-        
         var tableView = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight - 49), style: .plain)
         tableView.backgroundColor = kColor4
         self.view.addSubview(tableView)
@@ -28,13 +27,6 @@ class SWHomePageController: UIViewController {
     
     lazy var dataArr : [SWArticleModel] = {
         var dataArr = [SWArticleModel]()
-//        let model = SWArticleModel()
-//        model.articleTitle = "aaaaasds"
-//        model.authorNick = "文伟伟"
-//        model.clickCount = "点击100"
-//        dataArr.append(model)
-//        dataArr.append(model)
-//        dataArr.append(model)
         return dataArr
     }()
     
@@ -43,8 +35,10 @@ class SWHomePageController: UIViewController {
         // Do any additional setup after loading the view.
         navigationController?.isNavigationBarHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
-        self.netTest()
+        /// 请求网路数据
+        self.reloadData()
         self.view.backgroundColor = kColor
+        /// 创建广告轮播
         let header  = SWAdveSlideView.init(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 278))
         header.dataSource = ["http://pic.qjimage.com/pm0063/high/pm0063-4552dk.jpg","http://preview.quanjing.com/pm0046/pm0046-4622um.jpg","http://pic.qjimage.com/pm0020/high/pm0020-2123if.jpg"]
         tableView.tableHeaderView = header
@@ -55,6 +49,7 @@ class SWHomePageController: UIViewController {
     }
     
 }
+/// tableView代理
 extension SWHomePageController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArr.count
@@ -83,16 +78,14 @@ extension SWHomePageController : UITableViewDelegate,UITableViewDataSource{
         return headerView
     }
 }
+/// 请求网路数据
 extension SWHomePageController {
-    func netTest() {
-        // 1.创建请求路径
-        let path = "http://0.0.0.0:tuicool@api.tuicool.com/api/articles/hot.json?cid=0&size=30"
-        Alamofire.request(path, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
+    func reloadData() {
+        Alamofire.request(kHomePageURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
             print(response)
             let json = JSON(response.data!)
             print(json)
             for (index,subJson):(String, JSON) in json["articles"] {
-                print("\(index)===\(subJson)")
                 let model = SWArticleModel()
                 model.articleImage = subJson["img"].stringValue
                 model.authorNick = subJson["feed_title"].stringValue
@@ -106,30 +99,5 @@ extension SWHomePageController {
             }
             self.tableView.reloadData()
         }
-        // 转换成url(统一资源定位符)
-        let url = URL(string: path)!
-        // 2.创建请求对象
-        let request = URLRequest(url:url)
-        // 3.根据会话模式创建session(创建默认会话模式)
-        // 快速创建默认会话模式的session
-        let session = URLSession.shared
-        // 4.创建任务
-        // 参数1：需要发送的请求对象
-        // 参数2：服务返回数据的时候需要执行的对应的闭包
-        // 闭包参数1：服务器返回给客户端的数据
-        // 闭包参数2：服务器响应信息
-        // 闭包参数3：错误信息
-        let task = session.dataTask(with: request) { (data:Data?, response:URLResponse?, error:Error?) in
-            if error != nil
-            {
-                print(error!)
-            }
-            if response != nil
-            {
-                print(response!)
-            }
-        }
-        // 5.开始执行任务
-        task.resume()
     }
 }

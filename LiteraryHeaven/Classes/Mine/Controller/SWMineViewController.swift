@@ -20,14 +20,14 @@ class SWMineViewController: SWBaseSettingController {
     }
     override func addGroup()  {
         let group = SWBaseSettingGroup.init(headerText: "", footerText: "")
-        group.items.append(SWBaseSettingImage.init(title: "我的投稿", icon: "my_submission", subImage: "more", subClass: SWHomePageController()))
-        group.items.append(SWBaseSettingImage.init(title: "我的评文", icon: "my_article", subImage: "more", subClass: SWHomePageController()))
-        group.items.append(SWBaseSettingImage.init(title: "我的评论", icon: "my_comment", subImage: "more", subClass: SWHomePageController()))
-        group.items.append(SWBaseSettingImage.init(title: "我收藏的文章", icon: "my_collection", subImage: "more", subClass: SWHomePageController()))
+        group.items.append(SWBaseSettingImage.init(title: "我的投稿", icon: "my_submission", subImage: "more", subClass: nil))
+        group.items.append(SWBaseSettingImage.init(title: "我的评文", icon: "my_article", subImage: "more", subClass: nil))
+        group.items.append(SWBaseSettingImage.init(title: "我的评论", icon: "my_comment", subImage: "more", subClass: nil))
+        group.items.append(SWBaseSettingImage.init(title: "我收藏的文章", icon: "my_collection", subImage: "more", subClass: nil))
         baseData.append(group)
         
         let group1 = SWBaseSettingGroup.init(headerText: "", footerText: "")
-        group1.items.append(SWBaseSettingImage.init(title: "消息", icon: "news", subImage: "more", subClass: SWHomePageController()))
+        group1.items.append(SWBaseSettingImage.init(title: "消息", icon: "news", subImage: "more", subClass: nil))
         baseData.append(group1)
         self.tableView .reloadData()
     }
@@ -49,7 +49,7 @@ class SWMineViewController: SWBaseSettingController {
 }
 extension SWMineViewController : headerProtocol{
     func headerAction(sender:AnyObject){
-        self.navigationController?.pushViewController(SWHomePageController(), animated: true)
+    self.navigationController?.pushViewController(SWUserInfoController(), animated: true)
     }
 }
 extension SWMineViewController{
