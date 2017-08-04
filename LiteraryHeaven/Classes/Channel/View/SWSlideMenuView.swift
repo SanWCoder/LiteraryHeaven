@@ -49,9 +49,6 @@ class SWSlideMenuView : UIView {
     /// 一级菜单试图
     lazy var titleContentView : UICollectionView = {
         let flowLayout = SWSlideViewFlowLayout()
-        flowLayout.items = self.titleArrData
-        flowLayout.margin = self.titleViewMargin
-        flowLayout.scrollDirection = .horizontal
         let titleContentView = UICollectionView(frame: CGRect(), collectionViewLayout: flowLayout)
         titleContentView.backgroundColor = kColor
         titleContentView.showsVerticalScrollIndicator = false
@@ -64,9 +61,6 @@ class SWSlideMenuView : UIView {
     /// 二级菜单试图
     lazy var subTitleContentView : UICollectionView = {
         let flowLayout = SWSlideViewFlowLayout()
-        flowLayout.items = self.titleArrData?[0].subItems
-        flowLayout.margin = self.subTitleViewMargin
-        flowLayout.scrollDirection = .horizontal
         let subTitleContentView = UICollectionView(frame: CGRect(), collectionViewLayout: flowLayout)
         subTitleContentView.backgroundColor = kColor
         subTitleContentView.showsVerticalScrollIndicator = false
@@ -76,13 +70,13 @@ class SWSlideMenuView : UIView {
         subTitleContentView.dataSource = self
         return subTitleContentView
     }()
-    /// 数据源
+    /// 数据源(监听数据赋值，更新collectView)
     var titleArrData : [SWSlideMenuRootModel]?{
             didSet{
-                addSubview(titleContentView)
-                addSubview(subTitleContentView)
-                addSubview(bottomLine)
-                
+                /// 更新cell布局
+                updateCelllayout()
+                /// 更新第一个控制器
+                addFirstViewController()
                 titleContentView.reloadData()
                 subTitleContentView.reloadData()
             }
@@ -94,7 +88,9 @@ class SWSlideMenuView : UIView {
         subTitleViewHeight = 30
         titleViewMargin = 20
         subTitleViewMargin = 10
-        
+        addSubview(titleContentView)
+        addSubview(subTitleContentView)
+        addSubview(bottomLine)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -102,6 +98,7 @@ class SWSlideMenuView : UIView {
 }
 /// 更新试图frame
 extension SWSlideMenuView{
+    /// 更新视图布局
     func updateFrame()  {
         titleContentView.snp.makeConstraints { (make) in
             make.left.equalTo(self)
@@ -121,24 +118,53 @@ extension SWSlideMenuView{
             make.height.equalTo(1)
         make.top.equalTo(subTitleContentView.snp.bottom).offset(bottomHeight)
         }
-        let Vc = self.titleArrData?[0].subItems[0].itemViewController
-        Vc?.view.frame = CGRect(x: 0, y: titleViewHeight + subTitleViewHeight + bottomHeight + 1, width: self.frame.size.width, height: self.frame.size.height - (titleViewHeight + subTitleViewHeight + bottomHeight + 1))
-        self.addSubview((Vc?.view)!)
-        /// 调整子视图
-        for subView in (Vc?.view.subviews)! {
-            if subView is UITableView {
-                subView.frame = CGRect(x: 0, y: 0, width: (Vc?.view.frame.size.width)!, height: (Vc?.view.frame.size.height)!)
+        if ((self.titleArrData?.count)! > 0) && ((self.titleArrData?[0].subItems.count)! > 0){
+            let Vc = self.titleArrData?[0].subItems[0].itemViewController
+            Vc?.view.frame = CGRect(x: 0, y: titleViewHeight + subTitleViewHeight + bottomHeight + 1, width: self.frame.size.width, height: self.frame.size.height - (titleViewHeight + subTitleViewHeight + bottomHeight + 1))
+            self.addSubview((Vc?.view)!)
+            /// 调整子视图
+            for subView in (Vc?.view.subviews)! {
+                if subView is UITableView {
+                    subView.frame = CGRect(x: 0, y: 0, width: (Vc?.view.frame.size.width)!, height: (Vc?.view.frame.size.height)!)
+                }
             }
         }
         titleContentView.reloadData()
         subTitleContentView.reloadData()
+    }
+    /// flowLayout 更新cell布局
+    func updateCelllayout()  {
+        let flowLayout = SWSlideViewFlowLayout()
+        flowLayout.items = (self.titleArrData?.count)! > 0 ?self.titleArrData?[0].subItems : nil
+        flowLayout.margin = self.subTitleViewMargin
+        flowLayout.scrollDirection = .horizontal
+        subTitleContentView.collectionViewLayout = flowLayout
+        let titleFlowLayout = SWSlideViewFlowLayout()
+        titleFlowLayout.items = self.titleArrData
+        titleFlowLayout.margin = self.titleViewMargin
+        titleFlowLayout.scrollDirection = .horizontal
+        titleContentView.collectionViewLayout = titleFlowLayout
+    }
+    /// 更新第一个子控制器
+    func addFirstViewController() {
+        if ((self.titleArrData?.count)! > 0) && ((self.titleArrData?[0].subItems.count)! > 0){
+            let Vc = self.titleArrData?[0].subItems[0].itemViewController
+            Vc?.view.frame = CGRect(x: 0, y: titleViewHeight + subTitleViewHeight + bottomHeight + 1, width: self.frame.size.width, height: self.frame.size.height - (titleViewHeight + subTitleViewHeight + bottomHeight + 1))
+            self.addSubview((Vc?.view)!)
+            /// 调整子视图
+            for subView in (Vc?.view.subviews)! {
+                if subView is UITableView {
+                    subView.frame = CGRect(x: 0, y: 0, width: (Vc?.view.frame.size.width)!, height: (Vc?.view.frame.size.height)!)
+                }
+            }
+        }
     }
 }
 /// collectView的代理方法
 extension SWSlideMenuView : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView === self.subTitleContentView {
-            return titleArrData![currentIndex].subItems.count
+            return (titleArrData?.count)! > currentIndex ?titleArrData![currentIndex].subItems.count : 0
         }
         else{
             return titleArrData!.count
@@ -289,12 +315,42 @@ class SWSlideMenuCell: UICollectionViewCell {
         itemBtn.snp.makeConstraints { (make) in
             make.left.equalTo(self.contentView)
             make.right.equalTo(self.contentView)
-            make.top.equalTo(self.contentView).offset(type == .nomal ? 3 : 10)
-            make.bottom.equalTo(type == .nomal ? bottomLine.snp.top : self.contentView).offset(type == .nomal ? -5 : 0)
+            make.top.equalTo(self.contentView).offset(type == .nomal ? 3 : 6)
+            make.bottom.equalTo(type == .nomal ? bottomLine.snp.top : self.contentView).offset(type == .nomal ? -5 : -4)
         }
         itemBtn.backgroundColor = type == .nomal ? kColor : kColor4
         itemBtn.layer.cornerRadius = kRadius
         itemBtn.layer.masksToBounds = true
+    }
+}
+/// 自定义flowLayout
+class SWSlideViewFlowLayout: UICollectionViewFlowLayout {
+    var items : [SWSlideMenuModel]? /// 需要计算的数据模型
+    var margin : CGFloat = 20 /// item之间的间隔
+    let firstItemMargin : CGFloat = 18 /// 第一个Item距离父视图间隔
+    private var attributes :[UICollectionViewLayoutAttributes]?
+    
+    override func prepare() {
+        super.prepare()
+        attributes = [UICollectionViewLayoutAttributes]()
+        if items == nil {
+            return
+        }
+        /// 计算每个item的位置
+        for (index,slideMenuModel) in items!.enumerated() {
+            let title = NSString(string: slideMenuModel.itemTitle!)
+            let size = title.boundingRect(with: CGSize(width: 100, height: 20), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName:kFont3], context: nil).size
+            let atts = UICollectionViewLayoutAttributes(forCellWith: IndexPath(item:index , section: 0))
+            var width : CGFloat = 0
+            if attributes?.count != 0 {
+                width = (attributes?[0].frame.size.width)!
+            }
+            atts.frame = CGRect(x: firstItemMargin + (margin + width) * CGFloat(index), y: 0, width: size.width + 10, height: size.height + 14)
+            attributes?.append(atts)
+        }
+    }
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        return attributes
     }
 }
 

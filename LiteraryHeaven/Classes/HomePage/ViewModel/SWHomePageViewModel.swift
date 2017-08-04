@@ -12,6 +12,7 @@ import SwiftyJSON
 class SWHomePageViewModel: NSObject {
     /// 回调方法
     typealias completeHander = (_ homeData:Array<SWArticleModel>?) -> Void
+    
    class func homeData(completeHander : @escaping completeHander) -> Void {
         SWNetRequest.getRequestData(url: kHomePageURL, parames: nil) { (response, error) in
             if error != nil {

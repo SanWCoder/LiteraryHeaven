@@ -52,7 +52,8 @@ let kPushKey = "570cc349e0f55a0485000868"
 
 /// 地址（加地址数据）
 let kHomePageURL = "http://0.0.0.0:tuicool@api.tuicool.com/api/articles/hot.json?cid=0&size=30"
-
+/// 请求回调方法
+typealias completeHander = (_ responseobject : AnyObject?,_ error : Error?) -> Void
 
 /// 返回有透明度的颜色
 func RGBA(_ r:CGFloat,g:CGFloat,b:CGFloat,a:CGFloat) -> UIColor {

@@ -11,7 +11,6 @@
 		2D67DFA41F31D3E50092DF47 /* SWChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF791F31D3E50092DF47 /* SWChannelController.swift */; };
 		2D67DFA51F31D3E50092DF47 /* SWSlideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF7B1F31D3E50092DF47 /* SWSlideMenuModel.swift */; };
 		2D67DFA61F31D3E50092DF47 /* SWSlideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF7D1F31D3E50092DF47 /* SWSlideMenuView.swift */; };
-		2D67DFA71F31D3E50092DF47 /* SWSlideViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF7E1F31D3E50092DF47 /* SWSlideViewFlowLayout.swift */; };
 		2D67DFA81F31D3E50092DF47 /* SWConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF801F31D3E50092DF47 /* SWConfig.swift */; };
 		2D67DFA91F31D3E50092DF47 /* SWBaseSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF841F31D3E50092DF47 /* SWBaseSettingController.swift */; };
 		2D67DFAA1F31D3E50092DF47 /* SWBaseSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF861F31D3E50092DF47 /* SWBaseSettingModel.swift */; };
@@ -28,6 +27,7 @@
 		2D67DFB51F31D3E50092DF47 /* SWUserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF9C1F31D3E50092DF47 /* SWUserInfoModel.swift */; };
 		2D67DFB61F31D3E50092DF47 /* SWMineHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF9E1F31D3E50092DF47 /* SWMineHeaderVIew.swift */; };
 		2D67DFB71F31D3E50092DF47 /* SWNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DFA11F31D3E50092DF47 /* SWNetRequest.swift */; };
+		2D67DFBB1F32C44C0092DF47 /* SWChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DFBA1F32C44C0092DF47 /* SWChannelViewModel.swift */; };
 		2DA208A21F1F2C6000D318EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA208A01F1F2C6000D318EC /* Main.storyboard */; };
 		2DA208A41F1F2C6000D318EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA208A31F1F2C6000D318EC /* Assets.xcassets */; };
 		2DA208A71F1F2C6000D318EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA208A51F1F2C6000D318EC /* LaunchScreen.storyboard */; };
@@ -58,7 +58,6 @@
 		2D67DF791F31D3E50092DF47 /* SWChannelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWChannelController.swift; sourceTree = "<group>"; };
 		2D67DF7B1F31D3E50092DF47 /* SWSlideMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSlideMenuModel.swift; sourceTree = "<group>"; };
 		2D67DF7D1F31D3E50092DF47 /* SWSlideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSlideMenuView.swift; sourceTree = "<group>"; };
-		2D67DF7E1F31D3E50092DF47 /* SWSlideViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSlideViewFlowLayout.swift; sourceTree = "<group>"; };
 		2D67DF801F31D3E50092DF47 /* SWConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWConfig.swift; sourceTree = "<group>"; };
 		2D67DF841F31D3E50092DF47 /* SWBaseSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWBaseSettingController.swift; sourceTree = "<group>"; };
 		2D67DF861F31D3E50092DF47 /* SWBaseSettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWBaseSettingModel.swift; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		2D67DF9C1F31D3E50092DF47 /* SWUserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWUserInfoModel.swift; sourceTree = "<group>"; };
 		2D67DF9E1F31D3E50092DF47 /* SWMineHeaderVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMineHeaderVIew.swift; sourceTree = "<group>"; };
 		2D67DFA11F31D3E50092DF47 /* SWNetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWNetRequest.swift; sourceTree = "<group>"; };
+		2D67DFBA1F32C44C0092DF47 /* SWChannelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWChannelViewModel.swift; sourceTree = "<group>"; };
 		2DA208991F1F2C6000D318EC /* LiteraryHeaven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiteraryHeaven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA208A11F1F2C6000D318EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DA208A31F1F2C6000D318EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
@@ -122,13 +122,13 @@
 			isa = PBXGroup;
 			children = (
 				2D67DF751F31D3E50092DF47 /* AppDelegate */,
+				2D67DF891F31D3E50092DF47 /* HomePage */,
 				2D67DF771F31D3E50092DF47 /* Channel */,
+				2D67DF971F31D3E50092DF47 /* Mine */,
+				2D67DF821F31D3E50092DF47 /* Genera */,
 				2D67DF7F1F31D3E50092DF47 /* Config */,
 				2D67DF811F31D3E50092DF47 /* Extention */,
-				2D67DF821F31D3E50092DF47 /* Genera */,
-				2D67DF891F31D3E50092DF47 /* HomePage */,
 				2D67DF931F31D3E50092DF47 /* Main */,
-				2D67DF971F31D3E50092DF47 /* Mine */,
 				2D67DF9F1F31D3E50092DF47 /* Resource */,
 				2D67DFA01F31D3E50092DF47 /* Tools */,
 				2D67DFA21F31D3E50092DF47 /* Vendors */,
@@ -147,6 +147,7 @@
 		2D67DF771F31D3E50092DF47 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
+				2D67DFB91F32C4220092DF47 /* ViewModel */,
 				2D67DF781F31D3E50092DF47 /* Controller */,
 				2D67DF7A1F31D3E50092DF47 /* Model */,
 				2D67DF7C1F31D3E50092DF47 /* View */,
@@ -174,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				2D67DF7D1F31D3E50092DF47 /* SWSlideMenuView.swift */,
-				2D67DF7E1F31D3E50092DF47 /* SWSlideViewFlowLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +337,14 @@
 			children = (
 			);
 			path = Vendors;
+			sourceTree = "<group>";
+		};
+		2D67DFB91F32C4220092DF47 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D67DFBA1F32C44C0092DF47 /* SWChannelViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2DA208901F1F2C6000D318EC = {
@@ -631,7 +639,6 @@
 			files = (
 				2D67DFB51F31D3E50092DF47 /* SWUserInfoModel.swift in Sources */,
 				2D67DFB11F31D3E50092DF47 /* SWNavigationController.swift in Sources */,
-				2D67DFA71F31D3E50092DF47 /* SWSlideViewFlowLayout.swift in Sources */,
 				2D67DFA31F31D3E50092DF47 /* AppDelegate.swift in Sources */,
 				2D67DFAE1F31D3E50092DF47 /* SWAdveSlideView.swift in Sources */,
 				2D67DFAB1F31D3E50092DF47 /* SWBaseSettingCell.swift in Sources */,
@@ -646,6 +653,7 @@
 				2D67DFB31F31D3E50092DF47 /* SWMineViewController.swift in Sources */,
 				2D67DFA41F31D3E50092DF47 /* SWChannelController.swift in Sources */,
 				2D67DFA61F31D3E50092DF47 /* SWSlideMenuView.swift in Sources */,
+				2D67DFBB1F32C44C0092DF47 /* SWChannelViewModel.swift in Sources */,
 				2D67DFAC1F31D3E50092DF47 /* SWHomePageController.swift in Sources */,
 				2D67DFB21F31D3E50092DF47 /* SWTabBarController.swift in Sources */,
 				2D67DFA91F31D3E50092DF47 /* SWBaseSettingController.swift in Sources */,

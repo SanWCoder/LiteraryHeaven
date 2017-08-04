@@ -9,8 +9,8 @@
 import UIKit
 import Alamofire
 class SWNetRequest: NSObject {
-    /// 回调方法
-    typealias completeHander = (_ responseobject : AnyObject?,_ error : Error?) -> Void
+//    /// 回调方法
+//    typealias completeHander = (_ responseobject : AnyObject?,_ error : Error?) -> Void
     /// get请求
     public class func getRequestData(url : String,parames : Dictionary<String, Any>?,response :  @escaping completeHander){
         requestData(method: .get, url: url, parames: parames) { (responseObject, error) in
@@ -40,7 +40,7 @@ class SWNetRequest: NSObject {
         Alamofire.request(url, method: .get, parameters: parames, encoding: JSONEncoding.default, headers: nil).responseJSON { (jsonResponse) in
             /// 返回值
             jsonResponse.data != nil ? response(jsonResponse.data! as AnyObject,nil) :
-                response(nil,jsonResponse.result.error)
+            response(nil,jsonResponse.result.error)
         }
     }
     
