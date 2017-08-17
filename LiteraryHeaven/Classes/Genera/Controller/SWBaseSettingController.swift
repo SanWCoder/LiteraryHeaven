@@ -7,8 +7,10 @@
 //
 
 import UIKit
-
+import RxCocoa
+import RxSwift
 class SWBaseSettingController: UIViewController {
+    let  disposeBag = DisposeBag()
     
     lazy var baseData : [SWBaseSettingGroup] = {
         var baseData = [SWBaseSettingGroup]()

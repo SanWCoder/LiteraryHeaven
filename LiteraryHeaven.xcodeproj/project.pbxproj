@@ -28,9 +28,12 @@
 		2D67DFB61F31D3E50092DF47 /* SWMineHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF9E1F31D3E50092DF47 /* SWMineHeaderVIew.swift */; };
 		2D67DFB71F31D3E50092DF47 /* SWNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DFA11F31D3E50092DF47 /* SWNetRequest.swift */; };
 		2D67DFBB1F32C44C0092DF47 /* SWChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DFBA1F32C44C0092DF47 /* SWChannelViewModel.swift */; };
-		2DA208A21F1F2C6000D318EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA208A01F1F2C6000D318EC /* Main.storyboard */; };
-		2DA208A41F1F2C6000D318EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA208A31F1F2C6000D318EC /* Assets.xcassets */; };
-		2DA208A71F1F2C6000D318EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA208A51F1F2C6000D318EC /* LaunchScreen.storyboard */; };
+		2D7799C41F4590D7000BDA12 /* SWLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7799C21F4590D7000BDA12 /* SWLoginViewController.swift */; };
+		2D7799C51F4590D7000BDA12 /* SWLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7799C31F4590D7000BDA12 /* SWLoginViewController.xib */; };
+		2D7799C71F45922F000BDA12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7799C61F45922F000BDA12 /* Assets.xcassets */; };
+		2D7799CC1F45924B000BDA12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7799C81F45924B000BDA12 /* LaunchScreen.storyboard */; };
+		2D7799CD1F45924B000BDA12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7799CA1F45924B000BDA12 /* Main.storyboard */; };
+		2D7799CF1F459254000BDA12 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D7799CE1F459254000BDA12 /* Info.plist */; };
 		2DA208B21F1F2C6000D318EC /* LiteraryHeavenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA208B11F1F2C6000D318EC /* LiteraryHeavenTests.swift */; };
 		2DA208BD1F1F2C6000D318EC /* LiteraryHeavenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA208BC1F1F2C6000D318EC /* LiteraryHeavenUITests.swift */; };
 		89D2ACAB036B1B8F986B0CF7 /* Pods_LiteraryHeaven.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBD78DE27A1155C4AECBBF1 /* Pods_LiteraryHeaven.framework */; };
@@ -76,11 +79,13 @@
 		2D67DF9E1F31D3E50092DF47 /* SWMineHeaderVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMineHeaderVIew.swift; sourceTree = "<group>"; };
 		2D67DFA11F31D3E50092DF47 /* SWNetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWNetRequest.swift; sourceTree = "<group>"; };
 		2D67DFBA1F32C44C0092DF47 /* SWChannelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWChannelViewModel.swift; sourceTree = "<group>"; };
+		2D7799C21F4590D7000BDA12 /* SWLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWLoginViewController.swift; sourceTree = "<group>"; };
+		2D7799C31F4590D7000BDA12 /* SWLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWLoginViewController.xib; sourceTree = "<group>"; };
+		2D7799C61F45922F000BDA12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = LiteraryHeaven/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		2D7799C91F45924B000BDA12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LiteraryHeaven/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		2D7799CB1F45924B000BDA12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LiteraryHeaven/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		2D7799CE1F459254000BDA12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LiteraryHeaven/Info.plist; sourceTree = SOURCE_ROOT; };
 		2DA208991F1F2C6000D318EC /* LiteraryHeaven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiteraryHeaven.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DA208A11F1F2C6000D318EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2DA208A31F1F2C6000D318EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
-		2DA208A61F1F2C6000D318EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2DA208A81F1F2C6000D318EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		2DA208AD1F1F2C6000D318EC /* LiteraryHeavenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiteraryHeavenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA208B11F1F2C6000D318EC /* LiteraryHeavenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteraryHeavenTests.swift; sourceTree = "<group>"; };
 		2DA208B31F1F2C6000D318EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -297,6 +302,8 @@
 			children = (
 				2D67DF991F31D3E50092DF47 /* SWMineViewController.swift */,
 				2D67DF9A1F31D3E50092DF47 /* SWUserSetingController.swift */,
+				2D7799C21F4590D7000BDA12 /* SWLoginViewController.swift */,
+				2D7799C31F4590D7000BDA12 /* SWLoginViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -399,10 +406,10 @@
 		2DA208E91F1F320100D318EC /* SuportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				2DA208A01F1F2C6000D318EC /* Main.storyboard */,
-				2DA208A31F1F2C6000D318EC /* Assets.xcassets */,
-				2DA208A51F1F2C6000D318EC /* LaunchScreen.storyboard */,
-				2DA208A81F1F2C6000D318EC /* Info.plist */,
+				2D7799CE1F459254000BDA12 /* Info.plist */,
+				2D7799C81F45924B000BDA12 /* LaunchScreen.storyboard */,
+				2D7799CA1F45924B000BDA12 /* Main.storyboard */,
+				2D7799C61F45922F000BDA12 /* Assets.xcassets */,
 			);
 			name = SuportFiles;
 			path = Classes/SuportFiles;
@@ -542,9 +549,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DA208A71F1F2C6000D318EC /* LaunchScreen.storyboard in Resources */,
-				2DA208A41F1F2C6000D318EC /* Assets.xcassets in Resources */,
-				2DA208A21F1F2C6000D318EC /* Main.storyboard in Resources */,
+				2D7799CC1F45924B000BDA12 /* LaunchScreen.storyboard in Resources */,
+				2D7799C51F4590D7000BDA12 /* SWLoginViewController.xib in Resources */,
+				2D7799C71F45922F000BDA12 /* Assets.xcassets in Resources */,
+				2D7799CF1F459254000BDA12 /* Info.plist in Resources */,
+				2D7799CD1F45924B000BDA12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +583,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LiteraryHeaven/Pods-LiteraryHeaven-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -583,6 +593,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -653,6 +664,7 @@
 				2D67DFAC1F31D3E50092DF47 /* SWHomePageController.swift in Sources */,
 				2D67DFB21F31D3E50092DF47 /* SWTabBarController.swift in Sources */,
 				2D67DFA91F31D3E50092DF47 /* SWBaseSettingController.swift in Sources */,
+				2D7799C41F4590D7000BDA12 /* SWLoginViewController.swift in Sources */,
 				2D67DFAA1F31D3E50092DF47 /* SWBaseSettingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,22 +701,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2DA208A01F1F2C6000D318EC /* Main.storyboard */ = {
+		2D7799C81F45924B000BDA12 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2DA208A11F1F2C6000D318EC /* Base */,
-			);
-			name = Main.storyboard;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		2DA208A51F1F2C6000D318EC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2DA208A61F1F2C6000D318EC /* Base */,
+				2D7799C91F45924B000BDA12 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = ../..;
+			sourceTree = "<group>";
+		};
+		2D7799CA1F45924B000BDA12 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D7799CB1F45924B000BDA12 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

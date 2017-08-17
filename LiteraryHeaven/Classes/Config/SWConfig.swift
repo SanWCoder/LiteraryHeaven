@@ -8,6 +8,7 @@
 //
 
 import UIKit
+
 /// 屏幕宽
 let kScreenWidth = UIScreen.main.bounds.width
 /// 屏幕高

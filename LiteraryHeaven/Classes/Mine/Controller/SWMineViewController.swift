@@ -9,7 +9,7 @@
 import UIKit
 
 class SWMineViewController: SWBaseSettingController {
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = kColor4
@@ -43,13 +43,16 @@ class SWMineViewController: SWBaseSettingController {
         rightItem.setImage(UIImage(named:"set"), for: .normal)
         let BarItem = UIBarButtonItem(customView: rightItem)
         self.navigationItem.rightBarButtonItem = BarItem
-        rightItem.addTarget(self, action: #selector(rightClick(sender:)), for: .touchUpInside)
+        // 使用RX
+        rightItem.rx.tap
+            .subscribe(onNext:{ [weak self] in self?.rightClick(sender: rightItem)} )
+        .disposed(by: disposeBag)
     }
     
 }
 extension SWMineViewController : headerProtocol{
     func headerAction(sender:AnyObject){
-    self.navigationController?.pushViewController(SWUserInfoController(), animated: true)
+    self.navigationController?.pushViewController(SWLoginViewController(), animated: true)
     }
 }
 extension SWMineViewController{

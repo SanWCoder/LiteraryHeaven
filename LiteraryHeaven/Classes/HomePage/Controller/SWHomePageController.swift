@@ -37,12 +37,16 @@ class SWHomePageController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         /// 请求网路数据
         self.reloadData()
+        
         self.view.backgroundColor = kColor
         /// 创建广告轮播
         let header  = SWAdveSlideView.init(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 278))
         header.dataSource = ["http://pic.qjimage.com/pm0063/high/pm0063-4552dk.jpg","http://preview.quanjing.com/pm0046/pm0046-4622um.jpg","http://pic.qjimage.com/pm0020/high/pm0020-2123if.jpg"]
+//        header.delete(<#T##sender: Any?##Any?#>)
         tableView.tableHeaderView = header
     }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

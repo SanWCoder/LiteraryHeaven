@@ -169,6 +169,7 @@ extension SWAdveSlideView
         addSubview(contentView)
         
         let subViews : [String] = ["click_list","comment_list","article_list"]
+        
         for (index,view) in subViews.enumerated() {
             let btn = UIButton(type: .custom)
             btn.frame = CGRect(x: margin + (btnW + margin) * CGFloat(index), y: topH, width: btnW, height: btnH)

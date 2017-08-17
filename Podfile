@@ -8,6 +8,7 @@ target 'LiteraryHeaven' do
  pod 'Alamofire', '~> 4.5.0'
 # pod 'Heimdall', '~> 1.1.5'
  pod 'RxSwift', '~> 3.6.0'
+ pod 'RxCocoa', '~> 3.6.0'
  pod 'Kingfisher', '~> 3.10.3'
  pod 'SwiftyJSON', '~> 3.1.4'
 # pod 'MJExtension', '~> 3.0.13'
