@@ -26,18 +26,19 @@ class SWLoginViewController: UIViewController {
         // 添加右边按钮
         addRightItem()
         // 使用Rx验证
-        let iphoneObs = iphoneTF.rx.text.orEmpty
+        let iphoneValide = iphoneTF.rx.text.orEmpty
             .map({$0.characters.count >= 11})
             .shareReplay(1)
         
-        let pwsObs = pwsTF.rx.text.orEmpty
+        let pwsValide = pwsTF.rx.text.orEmpty
             .map({$0.characters.count >= 6})
             .shareReplay(1)
         
-        let enable = Observable.combineLatest(iphoneObs,pwsObs){
+        let enableValide = Observable.combineLatest(iphoneValide,pwsValide){
             $0 && $1}
             .shareReplay(1)
-        enable.bind(to: confimBtn.rx.isEnabled)
+        
+        enableValide.bind(to: confimBtn.rx.isEnabled)
             .disposed(by: disposeBag)
         
         confimBtn.rx.tap
@@ -59,6 +60,10 @@ class SWLoginViewController: UIViewController {
         rightItem.rx.tap
             .subscribe(onNext:{ [weak self] in self?.register()} )
             .disposed(by: disposeBag)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
     }
     func register() {
         let registerVC = SWRegisterViewController()
