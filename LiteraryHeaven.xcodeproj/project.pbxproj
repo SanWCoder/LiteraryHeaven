@@ -34,6 +34,10 @@
 		2D7799CC1F45924B000BDA12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7799C81F45924B000BDA12 /* LaunchScreen.storyboard */; };
 		2D7799CD1F45924B000BDA12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7799CA1F45924B000BDA12 /* Main.storyboard */; };
 		2D7799CF1F459254000BDA12 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D7799CE1F459254000BDA12 /* Info.plist */; };
+		2D7799D21F467A9D000BDA12 /* SWRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7799D01F467A9D000BDA12 /* SWRegisterViewController.swift */; };
+		2D7799D31F467A9D000BDA12 /* SWRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7799D11F467A9D000BDA12 /* SWRegisterViewController.xib */; };
+		2D7799D61F468FCF000BDA12 /* SWForgetPwsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7799D41F468FCF000BDA12 /* SWForgetPwsViewController.swift */; };
+		2D7799D71F468FCF000BDA12 /* SWForgetPwsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7799D51F468FCF000BDA12 /* SWForgetPwsViewController.xib */; };
 		2DA208B21F1F2C6000D318EC /* LiteraryHeavenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA208B11F1F2C6000D318EC /* LiteraryHeavenTests.swift */; };
 		2DA208BD1F1F2C6000D318EC /* LiteraryHeavenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA208BC1F1F2C6000D318EC /* LiteraryHeavenUITests.swift */; };
 		89D2ACAB036B1B8F986B0CF7 /* Pods_LiteraryHeaven.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBD78DE27A1155C4AECBBF1 /* Pods_LiteraryHeaven.framework */; };
@@ -85,6 +89,10 @@
 		2D7799C91F45924B000BDA12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LiteraryHeaven/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		2D7799CB1F45924B000BDA12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LiteraryHeaven/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		2D7799CE1F459254000BDA12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LiteraryHeaven/Info.plist; sourceTree = SOURCE_ROOT; };
+		2D7799D01F467A9D000BDA12 /* SWRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWRegisterViewController.swift; sourceTree = "<group>"; };
+		2D7799D11F467A9D000BDA12 /* SWRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWRegisterViewController.xib; sourceTree = "<group>"; };
+		2D7799D41F468FCF000BDA12 /* SWForgetPwsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWForgetPwsViewController.swift; sourceTree = "<group>"; };
+		2D7799D51F468FCF000BDA12 /* SWForgetPwsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWForgetPwsViewController.xib; sourceTree = "<group>"; };
 		2DA208991F1F2C6000D318EC /* LiteraryHeaven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiteraryHeaven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA208AD1F1F2C6000D318EC /* LiteraryHeavenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiteraryHeavenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA208B11F1F2C6000D318EC /* LiteraryHeavenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteraryHeavenTests.swift; sourceTree = "<group>"; };
@@ -304,6 +312,10 @@
 				2D67DF9A1F31D3E50092DF47 /* SWUserSetingController.swift */,
 				2D7799C21F4590D7000BDA12 /* SWLoginViewController.swift */,
 				2D7799C31F4590D7000BDA12 /* SWLoginViewController.xib */,
+				2D7799D01F467A9D000BDA12 /* SWRegisterViewController.swift */,
+				2D7799D11F467A9D000BDA12 /* SWRegisterViewController.xib */,
+				2D7799D41F468FCF000BDA12 /* SWForgetPwsViewController.swift */,
+				2D7799D51F468FCF000BDA12 /* SWForgetPwsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -550,10 +562,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D7799CC1F45924B000BDA12 /* LaunchScreen.storyboard in Resources */,
+				2D7799D71F468FCF000BDA12 /* SWForgetPwsViewController.xib in Resources */,
 				2D7799C51F4590D7000BDA12 /* SWLoginViewController.xib in Resources */,
 				2D7799C71F45922F000BDA12 /* Assets.xcassets in Resources */,
 				2D7799CF1F459254000BDA12 /* Info.plist in Resources */,
 				2D7799CD1F45924B000BDA12 /* Main.storyboard in Resources */,
+				2D7799D31F467A9D000BDA12 /* SWRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,12 +663,14 @@
 				2D67DFA31F31D3E50092DF47 /* AppDelegate.swift in Sources */,
 				2D67DFAE1F31D3E50092DF47 /* SWAdveSlideView.swift in Sources */,
 				2D67DFAB1F31D3E50092DF47 /* SWBaseSettingCell.swift in Sources */,
+				2D7799D21F467A9D000BDA12 /* SWRegisterViewController.swift in Sources */,
 				2D67DFB71F31D3E50092DF47 /* SWNetRequest.swift in Sources */,
 				2D67DFA51F31D3E50092DF47 /* SWSlideMenuModel.swift in Sources */,
 				2D67DFB41F31D3E50092DF47 /* SWUserSetingController.swift in Sources */,
 				2D67DFA81F31D3E50092DF47 /* SWConfig.swift in Sources */,
 				2D67DFAF1F31D3E50092DF47 /* SWHomePageCell.swift in Sources */,
 				2D67DFAD1F31D3E50092DF47 /* SWArticleModel.swift in Sources */,
+				2D7799D61F468FCF000BDA12 /* SWForgetPwsViewController.swift in Sources */,
 				2D67DFB01F31D3E50092DF47 /* SWHomePageViewModel.swift in Sources */,
 				2D67DFB61F31D3E50092DF47 /* SWMineHeaderVIew.swift in Sources */,
 				2D67DFB31F31D3E50092DF47 /* SWMineViewController.swift in Sources */,

@@ -52,6 +52,11 @@ class SWHomePageCell: UITableViewCell {
         liveBgView.layer.borderWidth = 1
         return liveBgView
     }()
+    lazy var lineView : UIView = {
+        let lineView = UIView()
+        lineView.backgroundColor = kColor3
+        return lineView
+    }()
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super .init(style: style, reuseIdentifier: reuseIdentifier)
         // 创建子视图
@@ -87,6 +92,7 @@ extension SWHomePageCell {
         contentView.addSubview(nickLab)
         contentView.addSubview(iconImage)
         contentView.addSubview(clickLab)
+        contentView.addSubview(lineView)
     }
 }
 /// 赋值
@@ -185,6 +191,12 @@ extension SWHomePageCell {
                 make.left.equalTo(iconImage.snp.right).offset(margin)
                 make.centerY.equalTo(iconImage)
             }
+        }
+        lineView.snp.makeConstraints { (make) in
+            make.left.equalTo(self.contentView)
+            make.right.equalTo(self.contentView)
+            make.bottom.equalTo(self.contentView).offset(-1)
+            make.height.equalTo(1)
         }
         iconImage.layer.cornerRadius = iconW / 2
         iconImage.layer.masksToBounds = true

@@ -15,10 +15,11 @@ import Kingfisher
 
 class SWHomePageController: UIViewController {
     lazy var tableView : UITableView = {
-        var tableView = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight - 49), style: .plain)
+        var tableView = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight - 49), style: .grouped)
         tableView.backgroundColor = kColor4
         self.view.addSubview(tableView)
         tableView.delegate = self
+        tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.estimatedRowHeight = 55
         tableView.tableFooterView = UIView()
