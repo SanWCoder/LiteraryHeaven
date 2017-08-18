@@ -9,8 +9,8 @@ import UIKit
 import RxCocoa
 import RxSwift
 class SWLoginViewController: UIViewController {
-    @IBOutlet weak var forgetPwsBtn: UIButton!
     let disposeBag = DisposeBag()
+    @IBOutlet weak var forgetPwsBtn: UIButton!
     @IBOutlet weak var topContraint: NSLayoutConstraint!
     @IBOutlet weak var confimBtn: UIButton!
     @IBOutlet weak var iphoneTF: UITextField!
