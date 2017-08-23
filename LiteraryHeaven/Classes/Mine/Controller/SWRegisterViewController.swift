@@ -30,6 +30,8 @@ class SWRegisterViewController: UIViewController {
         takeCodeBtn.layer.masksToBounds = true
         registerBtn.layer.cornerRadius = kRadius
         registerBtn.layer.masksToBounds = true
+        phoneTF.keyboardType = .phonePad
+        verifiCodeTF.keyboardType = .numberPad
         
         // 验证
         let phoneValide = phoneTF.rx.text.orEmpty

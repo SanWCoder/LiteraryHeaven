@@ -28,6 +28,9 @@ class SWForgetPwsViewController: UIViewController {
         takeCodeBtn.layer.masksToBounds = true
         conmmitBtn.layer.cornerRadius = kRadius
         conmmitBtn.layer.masksToBounds = true
+        phoneTF.keyboardType = .phonePad
+        verifiCodeTF.keyboardType = .numberPad
+        
         // 使用Rx
         let phoneValide = phoneTF.rx.text.orEmpty
             .map({$0.characters.count >= 11})

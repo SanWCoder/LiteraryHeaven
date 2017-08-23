@@ -23,6 +23,7 @@ class SWLoginViewController: UIViewController {
         confimBtn.layer.cornerRadius = kRadius
         confimBtn.layer.masksToBounds = true
         // Do any additional setup after loading the view.
+        iphoneTF.keyboardType = .phonePad
         // 添加右边按钮
         addRightItem()
         // 使用Rx验证
