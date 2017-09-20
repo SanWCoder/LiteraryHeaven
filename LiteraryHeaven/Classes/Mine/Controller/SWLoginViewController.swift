@@ -75,11 +75,15 @@ class SWLoginViewController: UIViewController {
         self.navigationController?.pushViewController(registerVC, animated: true)
     }
     func showAlert() {
-        let alert : UIAlertController = UIAlertController(title: "登录", message: "登录成功", preferredStyle: .alert)
-        let confim : UIAlertAction = UIAlertAction(title: "确定", style: .default) { (action) in
-            self.dismiss(animated: true, completion: nil)
+        SWMineViewModel.longin(phone:iphoneTF.text!, password: pwsTF.text!) { (response) in
+            if (response["code"] != nil) {
+                let alert : UIAlertController = UIAlertController(title: "登录", message: "登录成功", preferredStyle: .alert)
+                let confim : UIAlertAction = UIAlertAction(title: "确定", style: .default) { (action) in
+                    self.dismiss(animated: true, completion: nil)
+                }
+                alert.addAction(confim)
+                self.present(alert, animated: true, completion: nil)
+            }
         }
-        alert.addAction(confim)
-        self.present(alert, animated: true, completion: nil)
     }
 }

@@ -50,9 +50,11 @@ let kColor12 = UIColor.hexInt(0x666666)
 /// 友盟账号
 let kPushKey = "570cc349e0f55a0485000868"
 
-
+let IP = "127.0.0.1"
 /// 地址（加地址数据）
 let kHomePageURL = "http://0.0.0.0:tuicool@api.tuicool.com/api/articles/hot.json?cid=0&size=30"
+/// 登录地址
+let kLoginURL = "http://localhost:8181/login"
 /// 请求回调方法
 typealias completeHander = (_ responseobject : AnyObject?,_ error : Error?) -> Void
 

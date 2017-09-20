@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2A1D8A1F72536400B065B7 /* SWMineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A1D891F72536400B065B7 /* SWMineViewModel.swift */; };
 		2D67DFA31F31D3E50092DF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF761F31D3E50092DF47 /* AppDelegate.swift */; };
 		2D67DFA41F31D3E50092DF47 /* SWChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF791F31D3E50092DF47 /* SWChannelController.swift */; };
 		2D67DFA51F31D3E50092DF47 /* SWSlideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF7B1F31D3E50092DF47 /* SWSlideMenuModel.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D2A1D891F72536400B065B7 /* SWMineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMineViewModel.swift; sourceTree = "<group>"; };
 		2D67DF761F31D3E50092DF47 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D67DF791F31D3E50092DF47 /* SWChannelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWChannelController.swift; sourceTree = "<group>"; };
 		2D67DF7B1F31D3E50092DF47 /* SWSlideMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSlideMenuModel.swift; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D2A1D881F72534600B065B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A1D891F72536400B065B7 /* SWMineViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2D67DF741F31D3E50092DF47 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +308,7 @@
 		2D67DF971F31D3E50092DF47 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				2D2A1D881F72534600B065B7 /* ViewModel */,
 				2D67DF981F31D3E50092DF47 /* Controller */,
 				2D67DF9B1F31D3E50092DF47 /* Model */,
 				2D67DF9D1F31D3E50092DF47 /* View */,
@@ -660,6 +671,7 @@
 			files = (
 				2D67DFB51F31D3E50092DF47 /* SWUserInfoModel.swift in Sources */,
 				2D67DFB11F31D3E50092DF47 /* SWNavigationController.swift in Sources */,
+				2D2A1D8A1F72536400B065B7 /* SWMineViewModel.swift in Sources */,
 				2D67DFA31F31D3E50092DF47 /* AppDelegate.swift in Sources */,
 				2D67DFAE1F31D3E50092DF47 /* SWAdveSlideView.swift in Sources */,
 				2D67DFAB1F31D3E50092DF47 /* SWBaseSettingCell.swift in Sources */,

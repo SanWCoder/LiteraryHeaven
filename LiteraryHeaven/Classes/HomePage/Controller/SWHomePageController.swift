@@ -79,7 +79,7 @@ extension SWHomePageController : UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = SWHomaPageSectionHeadView.sectionHeaderViewIdtifer(tableView: tableView)
-        headerView?.sectionTitle = "散文天地"
+        headerView?.sectionTitle = "婚礼百科"
         return headerView
     }
 }

@@ -111,7 +111,7 @@ extension SWHomePageCell {
             articleImage.kf.setImage(with: URL(string: (articleMode?.articleImage)!))
         }
         else{
-            articleImage.image = UIImage(named: "wyh")
+            articleImage.image = UIImage(named: "LiteraryHeaven")
         }
         nickLab.text = articleMode?.authorNick
         clickLab.text = articleMode?.clickCount

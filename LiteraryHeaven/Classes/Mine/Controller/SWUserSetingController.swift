@@ -47,7 +47,7 @@ class SWUserInfoController: SWBaseSettingController {
     override func addGroup()  {
         let group = SWBaseSettingGroup.init(headerText: "", footerText: "")
         group.items.append(SWBaseSettingImage.init(title: "头像", icon: nil, subImage: "more", subClass: nil))
-        group.items.append(SWBaseSettingText.init(title: "笔名", icon: nil,subTitle: "少年不知愁滋味", subClass: nil))
+        group.items.append(SWBaseSettingText.init(title: "昵称", icon: nil,subTitle: "少年不知愁滋味", subClass: nil))
         group.items.append(SWBaseSettingText.init(title: "联系方式", icon: nil, subTitle: "12*****888", subClass: nil))
         baseData.append(group)
         
@@ -66,11 +66,10 @@ class SWAboutUsController: SWBaseSettingController {
     }
     override func addGroup()  {
         let group = SWBaseSettingGroup.init(headerText: "", footerText: "")
-        group.items.append(SWBaseSettingText.init(title: "官网", icon: nil, subTitle: "www.wenyouhui.com", subClass: nil))
-        group.items.append(SWBaseSettingText.init(title: "微信公众号", icon: nil, subTitle: "一路捞文友汇", subClass: nil))
-        group.items.append(SWBaseSettingText.init(title: "新浪微博", icon: nil, subTitle: "一路捞文友汇", subClass: nil))
+        group.items.append(SWBaseSettingText.init(title: "官网", icon: nil, subTitle: "www.LiteraryHeaven.com", subClass: nil))
+        group.items.append(SWBaseSettingText.init(title: "微信公众号", icon: nil, subTitle: "婚杂志", subClass: nil))
+        group.items.append(SWBaseSettingText.init(title: "新浪微博", icon: nil, subTitle: "婚杂志", subClass: nil))
         group.items.append(SWBaseSettingText.init(title: "客服电话", icon: nil, subTitle: "400-xxxxx", subClass: nil))
-        group.items.append(SWBaseSettingImage.init(title: "投稿须知", icon: nil, subImage: "more", subClass: SWSendArtiMsgController()))
         group.items.append(SWBaseSettingImage.init(title: "用户等级说明", icon: nil, subImage: "more", subClass: nil))
         baseData.append(group)
         
@@ -83,9 +82,9 @@ class SWSendArtiMsgController: SWBaseSettingController {
     }
     override func addGroup() {
         let group = SWBaseSettingGroup.init(headerText: "", footerText: "")
-        group.items.append(SWBaseSettingText.init(title: "在线投稿地址：www.wenyouhui.com", icon: nil, subTitle: "", subClass: nil))
-        group.items.append(SWBaseSettingText.init(title: "投稿头像地址：wwenyouhui@16lao.com", icon: nil, subTitle: "", subClass: nil))
-        group.items.append(SWBaseSettingText.init(title: "具体可咨询文友汇客服：400-xxxxx", icon: nil, subTitle: "", subClass: nil))
+        group.items.append(SWBaseSettingText.init(title: "在线投稿地址：www.LiteraryHeaven.com", icon: nil, subTitle: "", subClass: nil))
+        group.items.append(SWBaseSettingText.init(title: "投稿头像地址：LiteraryHeaven@163.com", icon: nil, subTitle: "", subClass: nil))
+        group.items.append(SWBaseSettingText.init(title: "具体可咨询婚杂志客服：400-xxxxx", icon: nil, subTitle: "", subClass: nil))
         baseData.append(group)
         
         self.tableView.reloadData()

@@ -99,7 +99,7 @@ class SWSlideMenuView : UIView {
 /// 更新试图frame
 extension SWSlideMenuView{
     /// 更新视图布局
-    func updateFrame()  {
+    func updateFrame() {
         titleContentView.snp.makeConstraints { (make) in
             make.left.equalTo(self)
             make.right.equalTo(self)

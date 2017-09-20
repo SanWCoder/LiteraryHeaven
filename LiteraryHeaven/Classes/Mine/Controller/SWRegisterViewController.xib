@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -166,7 +166,7 @@
                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wyh" translatesAutoresizingMaskIntoConstraints="NO" id="Chm-Lf-4f5">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LiteraryHeaven" translatesAutoresizingMaskIntoConstraints="NO" id="Chm-Lf-4f5">
                     <rect key="frame" x="135" y="50" width="104" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="3Sm-VR-Pe3"/>
@@ -185,14 +185,13 @@
                 <constraint firstAttribute="trailing" secondItem="tai-ce-pnb" secondAttribute="trailing" constant="60" id="7F1-t0-902"/>
                 <constraint firstItem="tai-ce-pnb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="7HL-0H-oU0"/>
                 <constraint firstItem="Xe2-M1-1BV" firstAttribute="leading" secondItem="VEO-EO-5zE" secondAttribute="trailing" constant="8" id="9Cz-5O-fqE"/>
-                <constraint firstAttribute="trailing" secondItem="Chm-Lf-4f5" secondAttribute="trailing" constant="136" id="BNj-Fg-iSP"/>
                 <constraint firstAttribute="trailing" secondItem="Xe2-M1-1BV" secondAttribute="trailing" constant="60" id="BeV-fk-nXH"/>
-                <constraint firstItem="Chm-Lf-4f5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="135" id="Cuf-Af-nHb"/>
                 <constraint firstItem="6gW-RK-FdV" firstAttribute="top" secondItem="tai-ce-pnb" secondAttribute="bottom" constant="25" id="Gze-pW-N41"/>
                 <constraint firstItem="Vzc-76-0uJ" firstAttribute="centerY" secondItem="Z25-MS-ELp" secondAttribute="centerY" id="IXq-4t-gFg"/>
                 <constraint firstItem="Vzc-76-0uJ" firstAttribute="leading" secondItem="xem-sN-cna" secondAttribute="trailing" constant="8" id="K59-1b-b5j"/>
                 <constraint firstItem="s2J-Du-8lJ" firstAttribute="centerY" secondItem="Co5-ti-TCQ" secondAttribute="centerY" id="L4K-h8-hvF"/>
                 <constraint firstItem="VgF-fI-Ihu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="NHo-F4-D53"/>
+                <constraint firstItem="Chm-Lf-4f5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PtA-co-gRh"/>
                 <constraint firstItem="lIl-a8-Uk6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="WgZ-zp-sKt"/>
                 <constraint firstItem="5cG-T6-r3g" firstAttribute="centerY" secondItem="2qv-G2-r8E" secondAttribute="centerY" id="XrQ-Xe-lRx"/>
                 <constraint firstAttribute="trailing" secondItem="5cG-T6-r3g" secondAttribute="trailing" constant="60" id="YqS-fE-Co1"/>
@@ -227,10 +226,10 @@
         </view>
     </objects>
     <resources>
+        <image name="LiteraryHeaven" width="104" height="36"/>
         <image name="nickname" width="20" height="20"/>
         <image name="password" width="20" height="20"/>
         <image name="phone" width="20" height="20"/>
         <image name="verification" width="20" height="20"/>
-        <image name="wyh" width="104" height="36"/>
     </resources>
 </document>

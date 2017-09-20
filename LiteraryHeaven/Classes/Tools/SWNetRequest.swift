@@ -37,7 +37,7 @@ class SWNetRequest: NSObject {
     }
     /// 网络请求
     fileprivate class func requestData(method:HTTPMethod,url : String,parames : Dictionary<String, Any>?,response : @escaping completeHander){
-        Alamofire.request(url, method: .get, parameters: parames, encoding: JSONEncoding.default, headers: nil).responseJSON { (jsonResponse) in
+        Alamofire.request(url, method: method, parameters: parames, encoding: URLEncoding.default, headers: nil).responseJSON { (jsonResponse) in
             /// 返回值
             jsonResponse.data != nil ? response(jsonResponse.data! as AnyObject,nil) :
             response(nil,jsonResponse.result.error)

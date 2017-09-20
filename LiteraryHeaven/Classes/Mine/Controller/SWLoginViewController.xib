@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -84,8 +84,8 @@
                         <constraint firstAttribute="height" constant="1" id="Ftj-UO-iyX"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wyh" translatesAutoresizingMaskIntoConstraints="NO" id="2i3-wB-1KS">
-                    <rect key="frame" x="135" y="48" width="50" height="36"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LiteraryHeaven" translatesAutoresizingMaskIntoConstraints="NO" id="2i3-wB-1KS">
+                    <rect key="frame" x="108" y="48" width="104" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="zk9-W1-Qrk"/>
                     </constraints>
@@ -122,19 +122,18 @@
                 <constraint firstAttribute="trailing" secondItem="NhJ-5o-ll5" secondAttribute="trailing" constant="68" id="X81-LR-kF1"/>
                 <constraint firstItem="hwG-q1-0kJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="66" id="Zit-WM-2oG"/>
                 <constraint firstItem="rBI-6W-xqn" firstAttribute="top" secondItem="Y59-R8-OJG" secondAttribute="bottom" constant="16" id="hbv-T7-CiQ"/>
-                <constraint firstAttribute="trailing" secondItem="2i3-wB-1KS" secondAttribute="trailing" constant="135" id="mwv-6W-uqv"/>
                 <constraint firstItem="rp5-Z1-XRR" firstAttribute="top" secondItem="2i3-wB-1KS" secondAttribute="bottom" constant="40" id="o66-eC-AsD"/>
                 <constraint firstAttribute="trailing" secondItem="hwG-q1-0kJ" secondAttribute="trailing" constant="67" id="oxM-kq-WHC"/>
+                <constraint firstItem="2i3-wB-1KS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rLJ-GO-Mdp"/>
                 <constraint firstAttribute="trailing" secondItem="v3c-Yo-iVJ" secondAttribute="trailing" constant="67" id="sYU-ol-CSP"/>
-                <constraint firstItem="2i3-wB-1KS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="135" id="wPv-Mm-vhQ"/>
                 <constraint firstItem="kXw-rh-LYt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="65" id="xJF-7I-370"/>
             </constraints>
             <point key="canvasLocation" x="239.5" y="18.5"/>
         </view>
     </objects>
     <resources>
+        <image name="LiteraryHeaven" width="104" height="36"/>
         <image name="password" width="20" height="20"/>
         <image name="phone" width="20" height="20"/>
-        <image name="wyh" width="104" height="36"/>
     </resources>
 </document>

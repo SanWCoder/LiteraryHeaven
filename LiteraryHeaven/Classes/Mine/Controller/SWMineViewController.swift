@@ -20,8 +20,7 @@ class SWMineViewController: SWBaseSettingController {
     }
     override func addGroup()  {
         let group = SWBaseSettingGroup.init(headerText: "", footerText: "")
-        group.items.append(SWBaseSettingImage.init(title: "我的投稿", icon: "my_submission", subImage: "more", subClass: nil))
-        group.items.append(SWBaseSettingImage.init(title: "我的评文", icon: "my_article", subImage: "more", subClass: nil))
+        group.items.append(SWBaseSettingImage.init(title: "我的杂志", icon: "my_submission", subImage: "more", subClass: nil))
         group.items.append(SWBaseSettingImage.init(title: "我的评论", icon: "my_comment", subImage: "more", subClass: nil))
         group.items.append(SWBaseSettingImage.init(title: "我收藏的文章", icon: "my_collection", subImage: "more", subClass: nil))
         baseData.append(group)

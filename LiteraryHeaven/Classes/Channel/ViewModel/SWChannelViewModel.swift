@@ -17,24 +17,24 @@ class SWChannelViewModel: NSObject {
             var titleArrData : [SWSlideMenuRootModel] = [SWSlideMenuRootModel]()
             /// 第一组
             let root = SWSlideMenuRootModel()
-            root.itemTitle = "散文"
+            root.itemTitle = "婚礼筹备"
             root.isSelected = true
             
             let model = SWSlideMenuSubModel()
-            model.itemTitle = "爱情散文"
+            model.itemTitle = "婚礼流程"
             let Vc = SWHomePageController()
             Vc.view.backgroundColor = UIColor.yellow
             model.itemViewController = Vc
             model.isSelected = true
             let model1 = SWSlideMenuSubModel()
-            model1.itemTitle = "抒情散文"
+            model1.itemTitle = "求婚"
             let Vc1 = SWHomePageController()
             Vc1.view.backgroundColor = UIColor.orange
             model1.itemViewController = Vc1
             
             
             let modelAtt = SWSlideMenuSubModel()
-            modelAtt.itemTitle = "杂文"
+            modelAtt.itemTitle = "婚礼"
             let VcAtt = SWHomePageController()
             VcAtt.view.backgroundColor = UIColor.blue
             modelAtt.itemViewController = VcAtt
@@ -43,21 +43,21 @@ class SWChannelViewModel: NSObject {
             root.subItems?.append(modelAtt)
             /// 第二组
             let root1 = SWSlideMenuRootModel()
-            root1.itemTitle = "诗歌"
+            root1.itemTitle = "婚纱照"
             
             let model2 = SWSlideMenuSubModel()
-            model2 .itemTitle = "古代诗歌"
+            model2 .itemTitle = "婚纱风格"
             let Vc2 = SWHomePageController()
             Vc2.view.backgroundColor = UIColor.blue
             model2.itemViewController = Vc2
             let model3 = SWSlideMenuSubModel()
-            model3.itemTitle = "现代诗歌"
+            model3.itemTitle = "旅拍"
             let Vc3 = SWHomePageController()
             Vc3.view.backgroundColor = UIColor.red
             model3.itemViewController = Vc3
             
             let modelAtt1 = SWSlideMenuSubModel()
-            modelAtt1.itemTitle = "新诗歌"
+            modelAtt1.itemTitle = "景点"
             let VcAtt1 = SWHomePageController()
             VcAtt1.view.backgroundColor = UIColor.blue
             modelAtt1.itemViewController = VcAtt1
@@ -67,22 +67,22 @@ class SWChannelViewModel: NSObject {
             
             /// 第三组
             let root2 = SWSlideMenuRootModel()
-            root2.itemTitle = "随笔记事"
+            root2.itemTitle = "婚礼现场"
             
             let model4 = SWSlideMenuSubModel()
-            model4 .itemTitle = "随笔"
+            model4 .itemTitle = "婚礼布置"
             let Vc4 = SWHomePageController()
             Vc4.view.backgroundColor = UIColor.blue
             model4.itemViewController = Vc4
             
             let model5 = SWSlideMenuSubModel()
-            model5.itemTitle = "记事"
+            model5.itemTitle = "婚礼致辞"
             let Vc5 = SWHomePageController()
             Vc5.view.backgroundColor = UIColor.red
             model5.itemViewController = Vc5
             
             let model6 = SWSlideMenuSubModel()
-            model6.itemTitle = "随笔聊"
+            model6.itemTitle = "婚礼音乐"
             let Vc6 = SWHomePageController()
             Vc6.view.backgroundColor = UIColor.blue
             model6.itemViewController = Vc6
