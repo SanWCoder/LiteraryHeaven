@@ -9,10 +9,11 @@
 import UIKit
 
 class SWMineViewController: SWBaseSettingController {
- 
+    var headerView :SWMineHeaderVIew = SWMineHeaderVIew()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = kColor4
+        NotificationCenter.default.addObserver(self, selector: #selector(updataData), name: NSNotification.Name(rawValue: "loginSuccess"), object: nil)
         // 添加头
         addHeaderView()
         // 添加item
@@ -32,8 +33,10 @@ class SWMineViewController: SWBaseSettingController {
     }
     func addHeaderView() -> Void {
         let height : CGFloat = 81
-        let headerView = SWMineHeaderVIew.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: height))
+        let headerView1 = SWMineHeaderVIew.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: height))
+        headerView = headerView1
         headerView.delegate = self
+        
         self.tableView.tableHeaderView = headerView
     }
     func addRightItem() -> Void {
@@ -59,5 +62,10 @@ extension SWMineViewController{
         let setVC = SWUserSetingController()
         setVC.title = "设置"
         self.navigationController?.pushViewController(setVC, animated: true)
+    }
+}
+extension SWMineViewController{
+    func updataData() {
+        headerView.nameBtn.setTitle(UserDefaults.standard.object(forKey: "nickName") as? String, for: .normal)
     }
 }

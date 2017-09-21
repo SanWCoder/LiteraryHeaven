@@ -8,6 +8,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import SVProgressHUD
 class SWLoginViewController: UIViewController {
     let disposeBag = DisposeBag()
     @IBOutlet weak var forgetPwsBtn: UIButton!
@@ -76,14 +77,15 @@ class SWLoginViewController: UIViewController {
     }
     func showAlert() {
         SWMineViewModel.longin(phone:iphoneTF.text!, password: pwsTF.text!) { (response) in
-            if (response["code"] != nil) {
-                let alert : UIAlertController = UIAlertController(title: "登录", message: "登录成功", preferredStyle: .alert)
-                let confim : UIAlertAction = UIAlertAction(title: "确定", style: .default) { (action) in
-                    self.dismiss(animated: true, completion: nil)
-                }
-                alert.addAction(confim)
-                self.present(alert, animated: true, completion: nil)
+            let code : Int = response["code"] as! Int
+            guard code == 0 else{
+                SVProgressHUD .showError(withStatus:response["msg"] as! String )
+                return
             }
+            UserDefaults.standard.set((response["data"] as! [String:Any])["nickName"] as! String, forKey: "nickName")
+        NotificationCenter.default.post(name: NSNotification.Name("loginSuccess"), object: nil)
+            SVProgressHUD .showSuccess(withStatus: "登录成功")
+            self.navigationController?.popViewController(animated: true)
         }
     }
 }

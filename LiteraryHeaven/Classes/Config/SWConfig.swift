@@ -55,6 +55,8 @@ let IP = "127.0.0.1"
 let kHomePageURL = "http://0.0.0.0:tuicool@api.tuicool.com/api/articles/hot.json?cid=0&size=30"
 /// 登录地址
 let kLoginURL = "http://localhost:8181/login"
+/// 注册地址
+let kRegisterURL = "http://localhost:8181/register"
 /// 请求回调方法
 typealias completeHander = (_ responseobject : AnyObject?,_ error : Error?) -> Void
 

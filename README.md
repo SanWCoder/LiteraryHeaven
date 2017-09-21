@@ -8,6 +8,10 @@
 * 如何使用RxSwift配合MVVM回调  
 
 不足之处，还望海涵，有问题可以随时交流哦😯 [:mail_SanW@163.com](http://mail.163.com/)
+> 2017.9.21--添加登录注册接口实现了客户端与服务端交互
+* 验证码接口暂时没有，暂时随便填写[:对应服务端项目（Swift）](https://github.com/SanWCoder/LiteraryHeaven-server)
+* 调用登录接口判断是否已经注册[:对应服务端项目（Swift）](https://github.com/SanWCoder/LiteraryHeaven-server)
+* 调用注册接口判断是否已经注册[:对应服务端项目（Swift）](https://github.com/SanWCoder/LiteraryHeaven-server)
 > 2017.8.18--添加注册和忘记密码页
 * 添加注册和忘记密码页
 * 使用RxSwift对相关属性进行了限制

@@ -6,6 +6,6 @@
 //  Copyright © 2017年 ONON. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import <CommonCrypto/CommonCrypto.h>
+#import "NSString+SWExt.h"
 //#import <MJExtension/MJExtension.h>
 //#import <MJRefresh/MJRefresh.h>

@@ -222,7 +222,7 @@
                 <constraint firstItem="2qv-G2-r8E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="zjz-ii-rrO"/>
                 <constraint firstAttribute="trailing" secondItem="6gW-RK-FdV" secondAttribute="trailing" constant="60" id="ztW-mb-YVc"/>
             </constraints>
-            <point key="canvasLocation" x="26.5" y="51.5"/>
+            <point key="canvasLocation" x="13" y="22"/>
         </view>
     </objects>
     <resources>

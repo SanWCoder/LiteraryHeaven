@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SVProgressHUD
 class SWRegisterViewController: UIViewController {
     let disposeBag = DisposeBag()
     @IBOutlet weak var topContraint: NSLayoutConstraint!
@@ -67,12 +68,15 @@ class SWRegisterViewController: UIViewController {
         self.view.endEditing(true)
     }
     func register() {
-        let alert : UIAlertController = UIAlertController(title: "注册", message: "注册成功", preferredStyle: .alert)
-        let confim : UIAlertAction = UIAlertAction(title: "确定", style: .default) { (action) in
-            self.dismiss(animated: true, completion: nil)
+        SWMineViewModel.register(phone: phoneTF.text!, password: passwordTF.text!, nickname: nickNameTF.text!, verify: verifiCodeTF.text!) { (response) in
+            let code : Int = response["code"] as! Int
+            guard code == 0 else{
+                SVProgressHUD .showError(withStatus:response["msg"] as! String )
+                return
+            }
+            SVProgressHUD .showSuccess(withStatus: "注册成功")
+            self.navigationController?.popViewController(animated: true)
         }
-        alert.addAction(confim)
-        self.present(alert, animated: true, completion: nil)
     }
     func sendVerifiCode()  {
         let alert : UIAlertController = UIAlertController(title: "发送验证码", message: "验证码发送成功", preferredStyle: .alert)

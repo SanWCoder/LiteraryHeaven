@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D2A1D8A1F72536400B065B7 /* SWMineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A1D891F72536400B065B7 /* SWMineViewModel.swift */; };
+		2D2A1DA21F7390E300B065B7 /* NSString+SWExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A1DA11F7390E300B065B7 /* NSString+SWExt.m */; };
 		2D67DFA31F31D3E50092DF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF761F31D3E50092DF47 /* AppDelegate.swift */; };
 		2D67DFA41F31D3E50092DF47 /* SWChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF791F31D3E50092DF47 /* SWChannelController.swift */; };
 		2D67DFA51F31D3E50092DF47 /* SWSlideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67DF7B1F31D3E50092DF47 /* SWSlideMenuModel.swift */; };
@@ -63,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		2D2A1D891F72536400B065B7 /* SWMineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMineViewModel.swift; sourceTree = "<group>"; };
+		2D2A1DA01F7390E300B065B7 /* NSString+SWExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SWExt.h"; sourceTree = "<group>"; };
+		2D2A1DA11F7390E300B065B7 /* NSString+SWExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SWExt.m"; sourceTree = "<group>"; };
 		2D67DF761F31D3E50092DF47 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D67DF791F31D3E50092DF47 /* SWChannelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWChannelController.swift; sourceTree = "<group>"; };
 		2D67DF7B1F31D3E50092DF47 /* SWSlideMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSlideMenuModel.swift; sourceTree = "<group>"; };
@@ -141,20 +144,43 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2D2A1D9D1F7390DA00B065B7 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A1DA01F7390E300B065B7 /* NSString+SWExt.h */,
+				2D2A1DA11F7390E300B065B7 /* NSString+SWExt.m */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		2D2A1D9E1F7390DA00B065B7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2D2A1D9F1F7390DA00B065B7 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
 		2D67DF741F31D3E50092DF47 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2D2A1D9D1F7390DA00B065B7 /* Extention */,
+				2D2A1D9E1F7390DA00B065B7 /* Resource */,
+				2D2A1D9F1F7390DA00B065B7 /* Vendors */,
 				2D67DF751F31D3E50092DF47 /* AppDelegate */,
 				2D67DF891F31D3E50092DF47 /* HomePage */,
 				2D67DF771F31D3E50092DF47 /* Channel */,
 				2D67DF971F31D3E50092DF47 /* Mine */,
 				2D67DF821F31D3E50092DF47 /* Genera */,
 				2D67DF7F1F31D3E50092DF47 /* Config */,
-				2D67DF811F31D3E50092DF47 /* Extention */,
 				2D67DF931F31D3E50092DF47 /* Main */,
-				2D67DF9F1F31D3E50092DF47 /* Resource */,
 				2D67DFA01F31D3E50092DF47 /* Tools */,
-				2D67DFA21F31D3E50092DF47 /* Vendors */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -208,13 +234,6 @@
 				2D67DF801F31D3E50092DF47 /* SWConfig.swift */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		2D67DF811F31D3E50092DF47 /* Extention */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extention;
 			sourceTree = "<group>";
 		};
 		2D67DF821F31D3E50092DF47 /* Genera */ = {
@@ -347,26 +366,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		2D67DF9F1F31D3E50092DF47 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 		2D67DFA01F31D3E50092DF47 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				2D67DFA11F31D3E50092DF47 /* SWNetRequest.swift */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		2D67DFA21F31D3E50092DF47 /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vendors;
 			sourceTree = "<group>";
 		};
 		2D67DFB91F32C4220092DF47 /* ViewModel */ = {
@@ -682,6 +687,7 @@
 				2D67DFA81F31D3E50092DF47 /* SWConfig.swift in Sources */,
 				2D67DFAF1F31D3E50092DF47 /* SWHomePageCell.swift in Sources */,
 				2D67DFAD1F31D3E50092DF47 /* SWArticleModel.swift in Sources */,
+				2D2A1DA21F7390E300B065B7 /* NSString+SWExt.m in Sources */,
 				2D7799D61F468FCF000BDA12 /* SWForgetPwsViewController.swift in Sources */,
 				2D67DFB01F31D3E50092DF47 /* SWHomePageViewModel.swift in Sources */,
 				2D67DFB61F31D3E50092DF47 /* SWMineHeaderVIew.swift in Sources */,

@@ -9,22 +9,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LiteraryHeaven/Classes/Mine/Controller/SWLoginViewController.swift"
-            timestampString = "527589905.094692"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "showAlert()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "LiteraryHeaven/Classes/Tools/SWNetRequest.swift"
             timestampString = "527588130.218829"
             startingColumnNumber = "9223372036854775807"
@@ -80,6 +64,22 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "requestData(method:url:parames:response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiteraryHeaven/Classes/Mine/Controller/SWMineViewController.swift"
+            timestampString = "527679603.244489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "updataData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
