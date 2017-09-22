@@ -6,65 +6,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LiteraryHeaven/Classes/Tools/SWNetRequest.swift"
-            timestampString = "527588130.218829"
+            timestampString = "527754422.938538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "postRequestData(url:parames:response:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static LiteraryHeaven.SWNetRequest.postRequestData (url : Swift.String, parames : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, response : (Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "static LiteraryHeaven.SWNetRequest.postRequestData (url : Swift.String, parames : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, response : (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "LiteraryHeaven"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/16lao/Desktop/LiteraryHeaven/LiteraryHeaven/Classes/Tools/SWNetRequest.swift"
-                  timestampString = "527588337.733607"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "59">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static LiteraryHeaven.SWNetRequest.(postRequestData (url : Swift.String, parames : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, response : (Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "LiteraryHeaven"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/16lao/Desktop/LiteraryHeaven/LiteraryHeaven/Classes/Tools/SWNetRequest.swift"
-                  timestampString = "527588337.735075"
+                  timestampString = "527763815.026514"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static LiteraryHeaven.SWNetRequest.(postRequestData (url : Swift.String, parames : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, response : (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "LiteraryHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/16lao/Desktop/LiteraryHeaven/LiteraryHeaven/Classes/Tools/SWNetRequest.swift"
+                  timestampString = "527763815.029148"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LiteraryHeaven/Classes/Tools/SWNetRequest.swift"
-            timestampString = "527588227.054593"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "requestData(method:url:parames:response:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,6 +64,38 @@
             startingLineNumber = "69"
             endingLineNumber = "69"
             landmarkName = "updataData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiteraryHeaven/Classes/HomePage/ViewModel/SWHomePageViewModel.swift"
+            timestampString = "527757263.743197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "homeData(completeHander:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiteraryHeaven/Classes/HomePage/ViewModel/SWHomePageViewModel.swift"
+            timestampString = "527760733.861745"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "homeData(completeHander:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

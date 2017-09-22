@@ -58,7 +58,7 @@ let kLoginURL = "http://localhost:8181/login"
 /// 注册地址
 let kRegisterURL = "http://localhost:8181/register"
 /// 请求回调方法
-typealias completeHander = (_ responseobject : AnyObject?,_ error : Error?) -> Void
+typealias completeHander = (_ responseobject : [String:Any]) -> Void
 
 /// 返回有透明度的颜色
 func RGBA(_ r:CGFloat,g:CGFloat,b:CGFloat,a:CGFloat) -> UIColor {

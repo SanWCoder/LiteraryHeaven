@@ -7,25 +7,20 @@
 //
 
 import UIKit
-import SwiftyJSON
 import Kingfisher
 
 class SWMineViewModel: NSObject {
     
-    typealias responseHandle = (_ responseData:[String:Any]) -> Void
-    
-    class func longin(phone:String,password:String,responseHandle:@escaping responseHandle) -> Void {
+    class func longin(phone:String,password:String,completeHander:@escaping completeHander) -> Void {
         let params : [String:Any] = ["phone":phone,"password":password.md5()]
-        SWNetRequest.postRequestData(url: kLoginURL, parames:params ) { (response, error) in
-            let json = JSON(response!).dictionaryObject
-            responseHandle(json!)
+        SWNetRequest.postRequestData(url: kLoginURL, parames:params ) { (response) in
+            completeHander(response)
         }
     }
-    class func register(phone:String,password:String,nickname:String,verify:String,responseHandle:@escaping responseHandle) -> Void {
+    class func register(phone:String,password:String,nickname:String,verify:String,completeHander:@escaping completeHander) -> Void {
         let params : [String:Any] = ["phone":phone,"password":password.md5(),"verify":verify,"nickname":nickname]
-        SWNetRequest.postRequestData(url: kRegisterURL, parames:params ) { (response, error) in
-            let json = JSON(response!).dictionaryObject
-            responseHandle(json!)
+        SWNetRequest.postRequestData(url: kRegisterURL, parames:params ) { (response) in
+            completeHander(response)
         }
     }
 }

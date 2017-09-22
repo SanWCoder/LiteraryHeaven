@@ -77,13 +77,17 @@ class SWLoginViewController: UIViewController {
     }
     func showAlert() {
         SWMineViewModel.longin(phone:iphoneTF.text!, password: pwsTF.text!) { (response) in
+            guard response["code"] as! Int != 400 else{
+                SVProgressHUD .showError(withStatus:response["msg"] as! String)
+                return
+            }
             let code : Int = response["code"] as! Int
             guard code == 0 else{
                 SVProgressHUD .showError(withStatus:response["msg"] as! String )
                 return
             }
             UserDefaults.standard.set((response["data"] as! [String:Any])["nickName"] as! String, forKey: "nickName")
-        NotificationCenter.default.post(name: NSNotification.Name("loginSuccess"), object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name("loginSuccess"), object: nil)
             SVProgressHUD .showSuccess(withStatus: "登录成功")
             self.navigationController?.popViewController(animated: true)
         }

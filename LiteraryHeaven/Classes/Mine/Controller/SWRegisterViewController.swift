@@ -69,6 +69,10 @@ class SWRegisterViewController: UIViewController {
     }
     func register() {
         SWMineViewModel.register(phone: phoneTF.text!, password: passwordTF.text!, nickname: nickNameTF.text!, verify: verifiCodeTF.text!) { (response) in
+            guard response["code"] as! Int != 400 else{
+                SVProgressHUD .showError(withStatus:response["msg"] as! String)
+                return
+            }
             let code : Int = response["code"] as! Int
             guard code == 0 else{
                 SVProgressHUD .showError(withStatus:response["msg"] as! String )
