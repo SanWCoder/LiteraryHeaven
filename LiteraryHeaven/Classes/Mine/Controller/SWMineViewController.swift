@@ -13,7 +13,7 @@ class SWMineViewController: SWBaseSettingController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = kColor4
-        NotificationCenter.default.addObserver(self, selector: #selector(updataData), name: NSNotification.Name(rawValue: "loginSuccess"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updataData), name: NSNotification.Name(rawValue: kLoginSuccessNC), object: nil)
         // 添加头
         addHeaderView()
         // 添加item
@@ -48,13 +48,18 @@ class SWMineViewController: SWBaseSettingController {
         // 使用RX
         rightItem.rx.tap
             .subscribe(onNext:{ [weak self] in self?.rightClick(sender: rightItem)} )
-        .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
     }
     
 }
 extension SWMineViewController : headerProtocol{
     func headerAction(sender:AnyObject){
-    self.navigationController?.pushViewController(SWLoginViewController(), animated: true)
+        if ((SWCommonTool.userInfo()?.token) != nil) {
+            self.navigationController?.pushViewController(SWUserSetingController(), animated: true)
+        }
+        else{
+            self.navigationController?.pushViewController(SWLoginViewController(), animated: true)
+        }
     }
 }
 extension SWMineViewController{
@@ -66,6 +71,8 @@ extension SWMineViewController{
 }
 extension SWMineViewController{
     func updataData() {
-        headerView.nameBtn.setTitle(UserDefaults.standard.object(forKey: "nickName") as? String, for: .normal)
+        headerView.nameBtn.setTitle(SWCommonTool.userInfo()?.nickName, for: .normal)
+        headerView.nameBtn.layer.borderColor = UIColor.white.cgColor
+        headerView.nameBtn.layer.borderWidth = 1
     }
 }

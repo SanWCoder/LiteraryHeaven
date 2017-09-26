@@ -46,6 +46,9 @@ class SWBaseSettingImage: SWBaseSettingModel {
 /// 纯文字模型
 class SWBaseSettingText: SWBaseSettingModel {
     var subTitle : String?
+    override init() {
+        super.init()
+    }
     init(title : String, icon : String?,subTitle:String ,subClass : AnyObject?) {
         self.subTitle = subTitle
         super.init(title : title, icon : icon,subClass : subClass)
@@ -65,6 +68,9 @@ class SWBaseSettingImageText: SWBaseSettingModel {
 class SWBaseSettingTextImage: SWBaseSettingModel {
     var subImage : String?
     var subTitle : String?
+    override init() {
+        super.init()
+    }
     init(title : String, icon : String?,subTitle :String,subImage : String ,subClass : AnyObject?) {
         self.subImage = subImage
         self.subTitle = subTitle

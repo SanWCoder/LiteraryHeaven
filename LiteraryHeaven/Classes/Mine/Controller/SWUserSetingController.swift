@@ -9,7 +9,7 @@
 import UIKit
 
 class SWUserSetingController: SWBaseSettingController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,24 +39,33 @@ class SWUserSetingController: SWBaseSettingController {
     }
 }
 class SWUserInfoController: SWBaseSettingController {
-    
+    var nickText : SWBaseSettingText = SWBaseSettingText()
+    var infoText : SWBaseSettingTextImage = SWBaseSettingTextImage()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(updataData), name: NSNotification.Name(rawValue: kLoginSuccessNC), object: nil)
     }
     override func addGroup()  {
         let group = SWBaseSettingGroup.init(headerText: "", footerText: "")
         group.items.append(SWBaseSettingImage.init(title: "头像", icon: nil, subImage: "more", subClass: nil))
-        group.items.append(SWBaseSettingText.init(title: "昵称", icon: nil,subTitle: "少年不知愁滋味", subClass: nil))
-        group.items.append(SWBaseSettingText.init(title: "联系方式", icon: nil, subTitle: "12*****888", subClass: nil))
+        nickText = SWBaseSettingText.init(title: "昵称", icon: nil,subTitle: (SWCommonTool.userInfo()?.nickName)!, subClass: SWUpdateUserInfoController());
+        group.items.append(nickText)
+        group.items.append(SWBaseSettingText.init(title: "联系方式", icon: nil, subTitle: (SWCommonTool.userInfo()?.phone)!, subClass: nil))
         baseData.append(group)
         
         let group1 = SWBaseSettingGroup.init(headerText: "", footerText: "")
-        group1.items.append(SWBaseSettingTextImage.init(title: "性别", icon: nil, subTitle: "男",subImage: "more", subClass: nil))
+        group1.items.append(SWBaseSettingTextImage.init(title: "性别", icon: nil, subTitle: (SWCommonTool.userInfo()?.sex)!,subImage: "more", subClass: nil))
         group1.items.append(SWBaseSettingImageText.init(title: "等级", icon: nil, subTitle: "资深用户",subImage: "vip_ple", subClass: nil))
-        group1.items.append(SWBaseSettingTextImage.init(title: "简介", icon: nil, subTitle: "可能忙着忘了没时间写",subImage: "more", subClass: nil))
+        infoText = SWBaseSettingTextImage.init(title: "简介", icon: nil, subTitle: (SWCommonTool.userInfo()?.info)!,subImage: "more", subClass:nil)
+        group1.items.append(infoText)
         baseData.append(group1)
         self.tableView .reloadData()
+    }
+    func updataData() {
+        infoText.subTitle = SWCommonTool.userInfo()?.info
+        nickText.subTitle = SWCommonTool.userInfo()?.nickName
+        self.tableView.reloadData()
     }
 }
 

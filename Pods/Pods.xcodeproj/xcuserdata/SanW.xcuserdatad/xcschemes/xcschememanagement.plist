@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJExtension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LiteraryHeaven.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +57,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1142299DE5A361718C20B4BDAA30CEE0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2CAF85B648DEF3660D36294814DB2401</key>
+		<key>0E75062B223E7B664C02939AE7C24D4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,27 +67,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6130879D119BDA6C119D85A0BA6F85DA</key>
+		<key>517006AE2625A9263F0ABE5AF8BAA28F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6CAFB4F462A1AFD9E5B8AA962ED89659</key>
+		<key>5AA17C95E926B760FD08E0B487DAEFA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>726A260DBB4C7744ECFB82CD1D61645F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7DFA02B370EF48CA1323CE81F40D8320</key>
+		<key>72B03449153A3FB0BC22D5778ADF91AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8EB0D3B2F73897183DCCF8DA5F3247E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E14A62900910444707A5504D25EC98DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F593D3E3967520B62A5AF82BA367C599</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBBBC016967C00E6950E907BB59F78D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -9,6 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import SVProgressHUD
+import SwiftyJSON
 class SWLoginViewController: UIViewController {
     let disposeBag = DisposeBag()
     @IBOutlet weak var forgetPwsBtn: UIButton!
@@ -86,8 +87,9 @@ class SWLoginViewController: UIViewController {
                 SVProgressHUD .showError(withStatus:response["msg"] as! String )
                 return
             }
-            UserDefaults.standard.set((response["data"] as! [String:Any])["nickName"] as! String, forKey: "nickName")
-            NotificationCenter.default.post(name: NSNotification.Name("loginSuccess"), object: nil)
+            SWCommonTool.saveUserInfo(userModel: SWUserInfoModel.mj_object(withKeyValues: (response["data"] as AnyObject) as! Dictionary<String,Any>)!)
+            
+            NotificationCenter.default.post(name: NSNotification.Name(kLoginSuccessNC), object: nil)
             SVProgressHUD .showSuccess(withStatus: "登录成功")
             self.navigationController?.popViewController(animated: true)
         }

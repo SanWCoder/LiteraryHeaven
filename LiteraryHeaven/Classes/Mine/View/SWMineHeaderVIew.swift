@@ -34,7 +34,8 @@ class SWMineHeaderVIew: UIView {
         sexImage = UIImageView(image: UIImage(named: "female"))
         
         nameBtn = UIButton(type: .custom)
-        nameBtn.setTitle("登录", for: .normal)
+        let title = SWCommonTool.userInfo()?.token != nil ? SWCommonTool.userInfo()?.nickName: "登录"
+        nameBtn.setTitle(title, for: .normal)
         nameBtn.setImage(UIImage(named:"ple"), for: .selected)
         nameBtn.titleLabel?.font = kFont2
         nameBtn.setTitleColor(kColor11, for: .normal)
@@ -52,7 +53,7 @@ class SWMineHeaderVIew: UIView {
 extension SWMineHeaderVIew{
     
     func addData(sender : UIButton) -> Void {
-        print(123)
+        
         delegate?.headerAction(sender: sender)
     }
     func makeIncrementer(forIncrement amount: Int) -> () -> Int {
@@ -83,7 +84,7 @@ extension SWMineHeaderVIew{
         }
         nameBtn.layer.cornerRadius = kRadius
         nameBtn.layer.masksToBounds = true
-        nameBtn.layer.borderColor = kColor1.cgColor
+        nameBtn.layer.borderColor = SWCommonTool.userInfo()?.token != nil ? UIColor.white.cgColor: kColor1.cgColor
         nameBtn.layer.borderWidth = 1
     }
 }

@@ -91,6 +91,12 @@ extension SWBaseSettingController : UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        let baseModel = self.baseData[indexPath.section].items[indexPath.row]
+        if baseModel.title == "简介" {
+            let vc = SWUpdateUserInfoController()
+            vc.isUpdateNickName = false
+            self.navigationController?.pushViewController(vc, animated: true)
+            return
+        }
         if (baseModel.subClass != nil) && (baseModel.subClass is UIViewController) {
             let viewController = baseModel.subClass as! UIViewController
             viewController.title = baseModel.title

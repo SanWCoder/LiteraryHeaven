@@ -49,14 +49,18 @@ let kColor12 = UIColor.hexInt(0x666666)
 
 /// 友盟账号
 let kPushKey = "570cc349e0f55a0485000868"
-
+/// 登录成功通知
+let kLoginSuccessNC = "loginSuccessNC"
+/// IP地址
 let IP = "127.0.0.1"
 /// 地址（加地址数据）
 let kHomePageURL = "http://0.0.0.0:tuicool@api.tuicool.com/api/articles/hot.json?cid=0&size=30"
 /// 登录地址
-let kLoginURL = "http://localhost:8181/login"
+let kLoginURL = "http://localhost:8181/users/login"
 /// 注册地址
-let kRegisterURL = "http://localhost:8181/register"
+let kRegisterURL = "http://localhost:8181/users/register"
+/// 修改用户信息
+let kUpdateInfoURL = "http://localhost:8181/users/updateInfo"
 /// 请求回调方法
 typealias completeHander = (_ responseobject : [String:Any]) -> Void
 
