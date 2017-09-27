@@ -15,6 +15,14 @@ class SWChannelController: UIViewController {
         return titleArrData
     }()
     var slideView : SWSlideMenuView?
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +30,6 @@ class SWChannelController: UIViewController {
         self.view.backgroundColor = kColor
         /// automaticallyAdjustsScrollViewInsets 影响布局
         self.automaticallyAdjustsScrollViewInsets = false
-        self.navigationController?.isNavigationBarHidden = true
         slideView = SWSlideMenuView(frame: CGRect(x: 0, y: kNavHeight - 20, width: self.view.frame.size.width, height: self.view.frame.size.height - kNavHeight - 20))
         slideView?.titleArrData = titleArrData
         slideView?.titleViewHeight = 35

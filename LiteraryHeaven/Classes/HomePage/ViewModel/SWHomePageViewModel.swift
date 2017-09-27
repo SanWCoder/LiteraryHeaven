@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import MJExtension
 
 class SWHomePageViewModel: NSObject {
     /// 回调方法
@@ -36,4 +37,25 @@ class SWHomePageViewModel: NSObject {
             completeHander(resonseData)
         }
     }
+    class func homeData(article:Int ,completeHander : @escaping completeHander) -> Void {
+        SWNetRequest.getRequestData(url: kArticleURL, parames: nil) { (response) in
+            if (response.keys.contains("code")) && response["code"] as! Int != 0 {
+                return
+            }
+            var resonseData = Array<SWArticleModel>()
+            let responseArr = response["data"] as AnyObject
+            print(response)
+            for (index,subJson) in (responseArr as! Array<Dictionary<String, Any>>).enumerated()  {
+                let model : SWArticleModel = SWArticleModel.mj_object(withKeyValues: subJson)
+                
+                if Int(index) == 0 {
+                    model.isRecommend = true
+                    model.articleImage = "http://preview.quanjing.com/pm0046/pm0046-4622um.jpg"
+                }
+                resonseData.append(model)
+            }
+            completeHander(resonseData)
+        }
+    }
+
 }

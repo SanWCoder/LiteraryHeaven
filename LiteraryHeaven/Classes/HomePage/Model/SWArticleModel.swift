@@ -9,6 +9,8 @@
 import UIKit
 
 class SWArticleModel: NSObject {
+    /// 文章id
+    var articleId : Int?
     /// 文章标题
     var articleTitle : String?
     /// 作者昵称
@@ -21,6 +23,8 @@ class SWArticleModel: NSObject {
     var articleImage : String?
     /// 组标题
     var sectionTitle : String?
+    /// 详情地址
+    var webUrl : String?
     /// 是否有推荐
     var isRecommend : Bool
     override init() {

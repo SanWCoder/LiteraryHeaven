@@ -23,6 +23,7 @@ class SWHomePageCell: UITableViewCell {
         let nickLab = UILabel()
         nickLab.font = kFont4
         nickLab.textColor = kColor12
+        nickLab.textAlignment = .center
         return nickLab
     }()
     
@@ -100,13 +101,11 @@ extension SWHomePageCell {
     fileprivate func addData() {
         titleLab.text = articleMode?.articleTitle
         iconImage.image = UIImage(named: "photo")
-        
-        iconImage.kf.setImage(with: URL(string: "http://c.hiphotos.baidu.com/zhidao/pic/item/d788d43f8794a4c22fe6ab9408f41bd5ac6e3943.jpg"), placeholder: UIImage(named: "photo"), options: [.targetCache(.default)], progressBlock: { (reciveSize, totalSize) in
-            
-        }) { (image, error, cacheType, url) in
-            
+        if ((articleMode?.iconImage) != nil) {
+            iconImage.kf.setImage(with: URL(string: (articleMode?.iconImage)!))
+        }else{
+            iconImage.image = UIImage(named: "photo")
         }
-        //
         if ((articleMode?.articleImage) != nil) {
             articleImage.kf.setImage(with: URL(string: (articleMode?.articleImage)!))
         }
@@ -146,12 +145,13 @@ extension SWHomePageCell {
                 make.width.height.equalTo(iconW)
             }
             nickLab.snp.remakeConstraints { (make) in
-                
-                make.left.equalTo(iconImage.snp.right).offset(margin)
+                make.left.equalTo(iconImage.snp.right).offset(margin / 2)
+                make.width.equalTo(40)
                 make.centerY.equalTo(iconImage)
             }
             clickLab.snp.remakeConstraints { (make) in
-                make.left.equalTo(nickLab.snp.right).offset(margin)
+                make.left.equalTo(nickLab.snp.right).offset(0)
+                make.right.equalTo(articleImage.snp.left).offset(-(margin / 2))
                 make.centerY.equalTo(nickLab)
             }
         }

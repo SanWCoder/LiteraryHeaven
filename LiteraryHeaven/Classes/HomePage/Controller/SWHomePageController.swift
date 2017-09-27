@@ -30,12 +30,19 @@ class SWHomePageController: UIViewController {
         var dataArr = [SWArticleModel]()
         return dataArr
     }()
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navigationController?.isNavigationBarHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
+        
         /// 请求网路数据
         self.reloadData()
         
@@ -43,15 +50,11 @@ class SWHomePageController: UIViewController {
         /// 创建广告轮播
         let header  = SWAdveSlideView.init(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 278))
         header.dataSource = ["http://pic.qjimage.com/pm0063/high/pm0063-4552dk.jpg","http://preview.quanjing.com/pm0046/pm0046-4622um.jpg","http://pic.qjimage.com/pm0020/high/pm0020-2123if.jpg"]
-//        header.delete(<#T##sender: Any?##Any?#>)
+        //        header.delete(<#T##sender: Any?##Any?#>)
         tableView.tableHeaderView = header
     }
-
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
 }
 /// tableView代理
@@ -61,6 +64,7 @@ extension SWHomePageController : UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = SWHomePageCell.homePageCell(tableView: tableView)
+        cell?.selectionStyle = .none
         cell?.articleMode = dataArr[indexPath.row]
         return cell!
     }
@@ -82,13 +86,32 @@ extension SWHomePageController : UITableViewDelegate,UITableViewDataSource{
         headerView?.sectionTitle = "婚礼百科"
         return headerView
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVc = SWWebViewDetailCoontroller()
+        detailVc.webUrl = dataArr[indexPath.row].webUrl!
+        self.navigationController?.pushViewController(detailVc, animated: true)
+    }
 }
 /// 请求网路数据
 extension SWHomePageController {
     func reloadData() {
-        SWHomePageViewModel.homeData { (homeData) in
+        //        SWHomePageViewModel.homeData { (homeData) in
+        //            self.dataArr = homeData!
+        //            self.tableView.reloadData()
+        //        }
+        SWHomePageViewModel.homeData(article: 0) { (homeData) in
             self.dataArr = homeData!
             self.tableView.reloadData()
         }
+    }
+}
+class SWWebViewDetailCoontroller: UIViewController,UIWebViewDelegate {
+    var webUrl : String = ""
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let webView = UIWebView(frame: self.view.frame)
+//        webView.delegate = self
+        self.view.addSubview(webView)
+        webView.loadRequest(NSURLRequest(url: NSURL(string: webUrl)! as URL) as URLRequest)
     }
 }

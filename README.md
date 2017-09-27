@@ -13,8 +13,9 @@
 
 # 更新记录  
 
+2017.9.27--调用首页接口，解析数据并添加详情页
+
 2017.9.26--完善我的界面相关数据，添加了修改用户名及简介接口及其功能
-[:对应服务端项目LiteraryHeaven-server（Swift + Perfect）](https://github.com/SanWCoder/LiteraryHeaven-server)
 
 2017.9.21--添加登录注册接口实现了客户端与服务端交互
 
