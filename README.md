@@ -1,6 +1,6 @@
 # 简介
 
-使用MVVM+RxSwift+Perfect+MySql的Swift学习项目[:对应服务端项目LiteraryHeaven-server（Swift + Perfect）](https://github.com/SanWCoder/LiteraryHeaven-server)，本项目不是完整项目只是大体的框框
+使用MVVM+RxSwift+Perfect+MySql的Swift学习项目，本项目不是完整项目只是大体的框框
 通过本项目你可以了解到：
 * 如何搭建简单的Swift工程
 * 如何简单自定义导航栏和tabbar
@@ -9,9 +9,15 @@
 * 如何快速搭建设置界面
 * 如何使用RxSwift配合MVVM回调  
 
+服务端项目 [LiteraryHeaven-server](https://github.com/SanWCoder/LiteraryHeaven-server)
+
+数据抓取项目:[LiteraryHeaven-crawler](https://github.com/SanWCoder/LiteraryHeaven-crawler)
+
 不足之处，还望海涵，有问题可以随时交流哦😯 [:mail_SanW@163.com](http://mail.163.com/)  
 
 # 更新记录  
+
+2017.9.29--添加退出登录
 
 2017.9.27--调用首页接口，解析数据并添加详情页
 

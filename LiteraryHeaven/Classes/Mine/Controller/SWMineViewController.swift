@@ -71,7 +71,7 @@ extension SWMineViewController{
 }
 extension SWMineViewController{
     func updataData() {
-        headerView.nameBtn.setTitle(SWCommonTool.userInfo()?.nickName, for: .normal)
+        headerView.nameBtn.setTitle(SWCommonTool.userInfo()?.nickName != nil ? SWCommonTool.userInfo()?.nickName : "登录", for: .normal)
         headerView.nameBtn.layer.borderColor = UIColor.white.cgColor
         headerView.nameBtn.layer.borderWidth = 1
     }

@@ -165,10 +165,10 @@ extension SWHomePageCell {
                 make.height.equalTo(contentView)
             })
             bgView.snp.remakeConstraints({ (make) in
-                make.width.equalTo(contentView.frame.size.width - topH)
+                make.left.equalTo(contentView).offset(margin)
+                make.right.equalTo(contentView).offset(-margin)
                 make.height.equalTo(imageW)
                 make.centerY.equalTo(contentView)
-                make.centerX.equalTo(contentView)
             })
             liveBgView.snp.remakeConstraints({ (make) in
                 make.left.equalTo(bgView).offset(8)

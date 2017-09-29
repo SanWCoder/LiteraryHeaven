@@ -33,6 +33,8 @@ class SWHomePageController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+        /// 请求网路数据
+        self.reloadData()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -44,7 +46,7 @@ class SWHomePageController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         
         /// 请求网路数据
-        self.reloadData()
+//        self.reloadData()
         
         self.view.backgroundColor = kColor
         /// 创建广告轮播
@@ -109,9 +111,19 @@ class SWWebViewDetailCoontroller: UIViewController,UIWebViewDelegate {
     var webUrl : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.show()
         let webView = UIWebView(frame: self.view.frame)
-//        webView.delegate = self
+        webView.delegate = self
         self.view.addSubview(webView)
         webView.loadRequest(NSURLRequest(url: NSURL(string: webUrl)! as URL) as URLRequest)
+    }
+    public func webViewDidStartLoad(_ webView: UIWebView){
+        
+    }
+    public func webViewDidFinishLoad(_ webView: UIWebView){
+        SVProgressHUD.dismiss()
+    }
+    public func webView(_ webView: UIWebView, didFailLoadWithError error: Error){
+        SVProgressHUD.dismiss()
     }
 }

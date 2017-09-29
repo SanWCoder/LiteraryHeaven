@@ -9,6 +9,8 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import SVProgressHUD
+
 class SWBaseSettingController: UIViewController {
     let  disposeBag = DisposeBag()
     

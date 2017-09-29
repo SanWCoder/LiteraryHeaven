@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SWUserSetingController: SWBaseSettingController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        addQuitBtn()
     }
     
     override func addGroup()  {
@@ -36,6 +38,33 @@ class SWUserSetingController: SWBaseSettingController {
         groupTwo.items.append(SWBaseSettingImage.init(title: "给我们评分", icon: nil,subImage: "more", subClass: nil))
         baseData.append(groupTwo)
         self.tableView .reloadData()
+    }
+    func addQuitBtn() {
+        let quitBtn : UIButton = UIButton(type: .custom)
+        quitBtn.setTitle("退出登录", for: .normal)
+        quitBtn.backgroundColor = UIColor.white
+        quitBtn.titleLabel?.font = kFont2
+        quitBtn.setTitleColor(kColor1, for: .normal)
+        quitBtn.addTarget(self, action: #selector(quit), for: .touchUpInside)
+        quitBtn.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 60)
+        self.tableView.tableFooterView = quitBtn
+    }
+    func quit(){
+        SWNetRequest.putRequestData(url: kQuitURL, parames: nil) { (response) in
+            guard response["code"] as! Int != 400 else{
+                SVProgressHUD .showError(withStatus:response["msg"] as! String)
+                return
+            }
+            let code : Int = response["code"] as! Int
+            guard code == 0 else{
+                SVProgressHUD .showError(withStatus:response["msg"] as! String )
+                return
+            }
+            SWCommonTool.saveUserInfo(userModel: SWUserInfoModel())
+            NotificationCenter.default.post(name: NSNotification.Name(kLoginSuccessNC), object: nil)
+            SVProgressHUD .showSuccess(withStatus: "退出成功")
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
 class SWUserInfoController: SWBaseSettingController {
