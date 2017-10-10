@@ -59,6 +59,8 @@ let kHomePageURL = "http://0.0.0.0:tuicool@api.tuicool.com/api/articles/hot.json
 let kLoginURL = "http://localhost:8181/users/login"
 /// 注册地址
 let kRegisterURL = "http://localhost:8181/users/register"
+/// 忘记密码地址
+let kForgetPasswordURL = "http://localhost:8181/users/forgetPassword"
 /// 退出登录地址
 let kQuitURL = "http://localhost:8181/users/quit"
 /// 请求文章地址

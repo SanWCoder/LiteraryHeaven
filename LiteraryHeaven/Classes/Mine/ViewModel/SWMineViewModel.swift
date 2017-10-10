@@ -23,6 +23,12 @@ class SWMineViewModel: NSObject {
             completeHander(response)
         }
     }
+    class func forgetPassword(phone:String,password:String,verify:String,completeHander:@escaping completeHander) -> Void {
+        let params : [String:Any] = ["phone":phone,"password":password.md5().md5(),"verify":verify]
+        SWNetRequest.putRequestData(url: kForgetPasswordURL, parames:params) { (response) in
+            completeHander(response)
+        }
+    }
     class func updateInfo(nickName:String,header:String,sex:String,info:String,completeHander:@escaping completeHander) -> Void {
         
         var params : [String:Any] = [:]

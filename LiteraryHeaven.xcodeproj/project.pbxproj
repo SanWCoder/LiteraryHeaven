@@ -567,14 +567,14 @@
 					};
 					2DA208AC1F1F2C6000D318EC = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = VGY8K73G67;
+						DevelopmentTeam = QZGQJ3RWTA;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2DA208981F1F2C6000D318EC;
 					};
 					2DA208B71F1F2C6000D318EC = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = VGY8K73G67;
+						DevelopmentTeam = QZGQJ3RWTA;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2DA208981F1F2C6000D318EC;
@@ -923,7 +923,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = VGY8K73G67;
+				DEVELOPMENT_TEAM = QZGQJ3RWTA;
 				INFOPLIST_FILE = LiteraryHeavenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = news.onon.LiteraryHeavenTests;
@@ -938,7 +938,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = VGY8K73G67;
+				DEVELOPMENT_TEAM = QZGQJ3RWTA;
 				INFOPLIST_FILE = LiteraryHeavenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = news.onon.LiteraryHeavenTests;
@@ -952,7 +952,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = VGY8K73G67;
+				DEVELOPMENT_TEAM = QZGQJ3RWTA;
 				INFOPLIST_FILE = LiteraryHeavenUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = news.onon.LiteraryHeavenUITests;
@@ -966,7 +966,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = VGY8K73G67;
+				DEVELOPMENT_TEAM = QZGQJ3RWTA;
 				INFOPLIST_FILE = LiteraryHeavenUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = news.onon.LiteraryHeavenUITests;

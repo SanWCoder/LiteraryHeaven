@@ -9,6 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import SVProgressHUD
 class SWForgetPwsViewController: UIViewController {
     let disposeBag = DisposeBag()
     @IBOutlet weak var topContraint: NSLayoutConstraint!
@@ -63,12 +64,19 @@ class SWForgetPwsViewController: UIViewController {
         self.view.endEditing(true)
     }
     func confimAction() {
-        let alert : UIAlertController = UIAlertController(title: "提交", message: "修改成功", preferredStyle: .alert)
-        let confim : UIAlertAction = UIAlertAction(title: "确定", style: .default) { (action) in
-            self.dismiss(animated: true, completion: nil)
+        SWMineViewModel.forgetPassword(phone: phoneTF.text!, password: passwordTF.text!, verify: verifiCodeTF.text!) { (response) in
+            guard response["code"] as! Int != 400 else{
+                SVProgressHUD .showError(withStatus:response["msg"] as! String)
+                return
+            }
+            let code : Int = response["code"] as! Int
+            guard code == 0 else{
+                SVProgressHUD .showError(withStatus:response["msg"] as! String )
+                return
+            }
+            SVProgressHUD .showSuccess(withStatus: "修改成功")
+            self.navigationController?.popViewController(animated: true)
         }
-        alert.addAction(confim)
-        self.present(alert, animated: true, completion: nil)
     }
     func sendVerifiCode()  {
         let alert : UIAlertController = UIAlertController(title: "发送验证码", message: "验证码发送成功", preferredStyle: .alert)
