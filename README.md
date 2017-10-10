@@ -9,7 +9,7 @@
 * 如何快速搭建设置界面
 * 如何使用RxSwift配合MVVM回调  
 
-服务端项目 [LiteraryHeaven-server](https://github.com/SanWCoder/LiteraryHeaven-server)
+服务端项目:[LiteraryHeaven-server](https://github.com/SanWCoder/LiteraryHeaven-server)
 
 数据抓取项目:[LiteraryHeaven-crawler](https://github.com/SanWCoder/LiteraryHeaven-crawler)
 
