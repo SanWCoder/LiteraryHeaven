@@ -7,12 +7,11 @@
 //
 
 #if os(iOS)
-    import UIKit
-#if !RX_NO_MODULE
-    import RxSwift
-#endif
 
-private class RxPickerViewArrayDataSource<T>: NSObject, UIPickerViewDataSource, SectionedViewDataSourceType {
+import UIKit
+import RxSwift
+
+class RxPickerViewArrayDataSource<T>: NSObject, UIPickerViewDataSource, SectionedViewDataSourceType {
     fileprivate var items: [T] = []
     
     func model(at indexPath: IndexPath) throws -> Any {
@@ -31,13 +30,13 @@ private class RxPickerViewArrayDataSource<T>: NSObject, UIPickerViewDataSource, 
     }
 }
 
-private class RxPickerViewSequenceDataSource<S: Sequence>
+class RxPickerViewSequenceDataSource<S: Sequence>
     : RxPickerViewArrayDataSource<S.Iterator.Element>
     , RxPickerViewDataSourceType {
     typealias Element = S
 
     func pickerView(_ pickerView: UIPickerView, observedEvent: Event<S>) {
-        UIBindingObserver(UIElement: self) { dataSource, items in
+        Binder(self) { dataSource, items in
             dataSource.items = items
             pickerView.reloadAllComponents()
         }
